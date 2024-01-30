@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { H1, H3 } from '../../components/Heading';
 import { useTheme } from '../../styles/theme';
-import { Header, HeaderWrapper, Photo, PhotoContainer, TitleContainer } from './parts';
+import { Header, HeaderWrapper, LightH3, Photo, PhotoContainer, TitleContainer } from './parts';
 import { Contact } from '../Contact';
 
 type Props = {};
@@ -21,7 +21,7 @@ export const Title: FC<Props> = ({}) => {
         <TitleContainer>
           <H1>name</H1>
           <H3>title</H3>
-          <H3 color={theme.colors.light}>cracowLocation</H3>
+          <LightH3 color={theme.colors.mediumLight}>cracowLocation</LightH3>
           {/* <Contact /> */}
         </TitleContainer>
       </Header>

@@ -14,7 +14,7 @@ export const Languages: FC<Props> = ({}) => {
 
       <Text text={'english'}>
         {' '}
-        <InlineText color={theme.colors.light}>fullProfessional</InlineText>
+        <InlineText color={theme.colors.mediumLight}>fullProfessional</InlineText>
       </Text>
     </Wrapper>
   );

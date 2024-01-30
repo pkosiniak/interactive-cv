@@ -8,10 +8,10 @@ type Props = {
 const common = ({ color }: Props) => css`
   ${color ? `color: ${color};` : ''};
   margin: 0;
+  font-weight: 500;
 `;
 
 export const H1 = styled.h1`
-  /* color: ${({ theme }) => theme.colors.text}; */
   ${common}
   font-size: 2rem;
   font-weight: 500;
@@ -20,16 +20,21 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   ${common}
+  font-size: 1.7rem;
 `;
 
 export const H3 = styled.h3`
   ${common}
+  font-size: 1.3rem;
 `;
 
 export const H4 = styled.h4`
   ${common}
+  font-size: 1.1rem;
 `;
 
 export const H5 = styled.h5`
   ${common}
+  font-size: 1rem;
+  font-weight: 700;
 `;

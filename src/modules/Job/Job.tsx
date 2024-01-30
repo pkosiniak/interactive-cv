@@ -2,7 +2,7 @@ import { Box, H3, H4 } from '@/components';
 import { Logo } from '@/components/Image';
 import { FCC } from '@/types';
 import { useTheme } from '@emotion/react';
-import { Container, Wrapper } from './parts';
+import { Container, LightH4, Wrapper } from './parts';
 
 type Props = {
   position: string;
@@ -30,8 +30,8 @@ export const Job: FCC<Props> = ({
         <Box>
           <H3>{company}</H3>
           <H3>{position}</H3>
-          <H4>{duration}</H4>
-          {location && <H4 color={theme.colors.light}>{location}</H4>}
+          <LightH4>{duration}</LightH4>
+          {location && <LightH4 color={theme.colors.mediumLight}>{location}</LightH4>}
         </Box>
       </Container>
 

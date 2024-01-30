@@ -10,8 +10,10 @@ const Aside = styled.aside`
   padding-top: 2.5cm;
   padding-left: 1cm;
   padding-right: 0.5cm;
-  background-color: ${({ theme }) => theme.colors.sidePanel};
-  color: ${({ theme }) => theme.colors.contrast};
+  background-color: ${({ theme }) => theme.colors.main};
+  &, div, h4 {
+    color: ${({ theme }) => theme.colors.contrast};
+  }
   gap: 30px;
 `;
 

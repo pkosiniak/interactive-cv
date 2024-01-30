@@ -21,14 +21,14 @@ const Anchor = styled.a`
   }
 
   &:hover {
-    color: ${({ theme }) => theme.colors.light};
+    color: ${({ theme }) => theme.colors.mediumLight};
     /* ${color} */
     text-decoration: none;
     transition: color 0.5s;
   }
 
   &:active {
-    color: ${({ theme }) => theme.colors.light};
+    color: ${({ theme }) => theme.colors.mediumLight};
     /* ${color} */
     text-decoration: none;
   }

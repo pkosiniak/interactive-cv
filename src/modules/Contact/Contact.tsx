@@ -25,7 +25,7 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
       {isOnSide && <H4 color={sideColor}>contact</H4>}
 
       <Container>
-        <LinkWrapper color={isOnSide ? theme.colors.light : undefined}>
+        <LinkWrapper color={isOnSide ? theme.colors.mediumLight : undefined}>
           <Mail24Regular />
 
           <Link href={mailHref} color={sideColor} style={{ textAlign: 'right' }} breakAt={isOnSide ? '@' : ''}>

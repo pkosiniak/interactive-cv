@@ -1,3 +1,4 @@
+import { H3 } from '@/components';
 import styled from '@emotion/styled';
 
 export const HeaderWrapper = styled.div`
@@ -26,4 +27,8 @@ export const TitleContainer = styled.div`
 
 export const Photo = styled.img`
   border-radius: 666px;
+`;
+
+export const LightH3 = styled(H3)`
+  font-weight: 400;
 `;

@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 import { FC, ImgHTMLAttributes } from 'react';
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  margin-top: 5px;
+`;
 
 const SIZE = 50;
 

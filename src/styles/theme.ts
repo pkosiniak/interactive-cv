@@ -3,10 +3,13 @@ import { css, useTheme as useThemeHook } from '@emotion/react';
 
 const lightColors = {
   text: '#000',
+  dark: '#333',
   medium: '#666',
-  light: '#999',
+  mediumLight: '#999',
+  light: '#bbb',
+  veryLight: '#f1f9f1',
   background: '#fff',
-  sidePanel: '#35472f',
+  main: '#35472f',
   contrast: '#fff',
   transparent: '#0000',
 };
@@ -15,12 +18,15 @@ export const themeLight = {
   colors: lightColors,
 };
 
-const darkColors = {
+const darkColors: Colors = {
   text: '#fff',
+  dark: '#333',
   medium: '#666',
-  light: '#999',
+  mediumLight: '#999',
+  light: '#bbb',
+  veryLight: '#2c2f2c',
   background: '#333',
-  sidePanel: '#35472f',
+  main: '#35472f',
   contrast: '#fff',
   transparent: '#0000',
 };
@@ -47,3 +53,8 @@ export const fill = ({ color }: ColorProps) => css`
   ${color ? `fill: ${color};` : ''};
 `;
 export const toCssValue = (value: number | string) => asString(value) ?? `${value}px`;
+
+export enum FONT_SIZE {
+  SMALL = 11,
+  LARGE = 16,
+}
