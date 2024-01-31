@@ -1,6 +1,4 @@
-import styled from '@emotion/styled';
 import { FC, useCallback, useMemo } from 'react';
-import { Button } from '../../../components/Button';
 import {
   WeatherSunny20Regular,
   WeatherSunny20Filled,
@@ -10,7 +8,7 @@ import {
 import { useTheme } from '@emotion/react';
 import { themeDark, themeLight } from '@/styles/theme';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { darkModeAtom, themeAtom } from '@/store/themeAtom';
+import { darkModeAtom, themeAtom } from '@/store';
 import { IconContainer, Toggle } from './parts';
 
 

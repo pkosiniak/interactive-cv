@@ -6,7 +6,7 @@ import { ThemeProvider } from '@emotion/react';
 import { MainArticle } from './modules/Article';
 import { ControlPanel } from './modules/ControlPanel';
 import { SidePanel } from './modules/SidePanel';
-import { fontSizeAtom, themeAtom } from './store';
+import { fontSizeAtom, sidePanelAtom, themeAtom } from './store';
 import { GlobalStyles, Theme } from './styles';
 
 export const Container = styled.div`
@@ -24,6 +24,7 @@ export const Main = styled.main`
 export const AppContainer: FC = () => {
   const currentTheme = useRecoilValue(themeAtom);
   const fontSize = useRecoilValue(fontSizeAtom);
+  const showSidePanel = useRecoilValue(sidePanelAtom);
 
   useLayoutEffect(() => {
     document.querySelector('html')?.setAttribute('style', `font-size: ${fontSize}px`);
@@ -35,7 +36,7 @@ export const AppContainer: FC = () => {
       <Container>
         <Main>
           <ControlPanel />
-          <SidePanel />
+          {showSidePanel && <SidePanel />}
           <MainArticle />
         </Main>
       </Container>

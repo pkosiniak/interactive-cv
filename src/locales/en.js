@@ -5,7 +5,7 @@ const recourses = {
   email: 'pawelkosiniak@gmail.com',
   phone: '+48531487666',
   linkedIn: 'linkedin.com/in/pawel-kosiniak',
-  cracowLocation: 'Cracow, Małopolskie, Poland',
+  cracowLocation: 'Cracow, Lesser Poland, Poland',
   summaryTitle: 'Summary',
   summaryText:
     "I am a young and creative programmer, willing to take up challenges, quickly learning new technologies, who likes to use unconventional approaches and find new or non-obvious solutions. Originally I wanted to become an acoustician, but at one point I realized that as a software engineer, I can achieve much more than as an acoustician - create something that will be much more 'tangible'. In 2019 I became interested in React and started writing my first projects in this technology, and right after that I took part in an internship organized by x-kom, where I was working on a part of the online store website. I defended my engineering thesis based on React Native and embedded systems in 2020. Since then, I've worked on a few different projects, mainly in React, but also in Express, React-Native. Currently, in addition to continuing to work in the front-end, I am interested in developing my knowledge and skills in back-end technologies.",
@@ -58,7 +58,7 @@ const recourses = {
   education: 'Education',
   agh: 'AGH University of Science and Technology',
   engineer: 'Bachelor of Engineering (B.E.), Applied Computer Science',
-  aghDuration: '2015 – 2020',
+  aghDuration: '2015 - 2020',
   thesisTopic: 'Subject of engineering thesis:',
   thesisTopicText:
     '"Development of the immobilizer prototype using a microcontroller and application for the Android system using encrypted Bluetooth communication"',

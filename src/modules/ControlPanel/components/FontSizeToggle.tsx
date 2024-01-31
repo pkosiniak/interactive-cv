@@ -13,7 +13,7 @@ import { useTheme } from '@emotion/react';
 
 type Props = {};
 
-export const FontSizeControls: FC<Props> = ({}) => {
+export const FontSizeToggle: FC<Props> = ({}) => {
   const setFontSize = useSetRecoilState(fontSizeAtom);
   const [isLarge, setIsLarge] = useRecoilState(largeFontStateAtom);
 
@@ -31,25 +31,12 @@ export const FontSizeControls: FC<Props> = ({}) => {
 
   return (
     <Toggle onClick={handleClick}>
-      {/* <TextFontSize20Regular /> */}
-
       <IconContainer style={!isLarge ? highlight : undefined}>
-        {isLarge ? (
-          <FontDecrease20Regular width={16} style={{ fontSize: 16 }} />
-        ) : (
-          <FontDecrease20Filled width={16} style={{ fontSize: 16 }} />
-        )}
-
-        {/* <TextFontRegular /> */}
+        {isLarge ? <FontDecrease20Regular /> : <FontDecrease20Filled />}
       </IconContainer>
 
       <IconContainer style={isLarge ? highlight : undefined}>
-        {isLarge ? (
-          <FontIncrease20Filled width={16} style={{ fontSize: 16 }} />
-        ) : (
-          <FontIncrease20Regular width={16} style={{ fontSize: 16 }} />
-        )}
-        {/* <TextFont16Regular /> */}
+        {isLarge ? <FontIncrease20Filled /> : <FontIncrease20Regular />}
       </IconContainer>
     </Toggle>
   );

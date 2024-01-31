@@ -2,16 +2,33 @@ import styled from '@emotion/styled';
 import { FC } from 'react';
 import { Contact } from '../Contact';
 import { Languages } from '../Languages';
+import { useRecoilValue } from 'recoil';
+import { regularViewAtom } from '@/store';
+import { css } from '@emotion/react';
 
-const Aside = styled.aside`
-  display: flex;
-  flex-direction: column;
+const printView = css`
   width: 6.5cm;
   padding-top: 2.5cm;
   padding-left: 1cm;
   padding-right: 0.5cm;
+`;
+
+const regularView = css`
+  max-width: 350px;
+  padding-top: 80px;
+  padding-right: 40px;
+  padding-left: 40px;
+`;
+
+const Aside = styled.aside<{ isRegular: boolean }>`
+  display: flex;
+  flex-direction: column;
+  ${({ isRegular }) => (isRegular ? regularView : printView)}
+
   background-color: ${({ theme }) => theme.colors.main};
-  &, div, h4 {
+  &,
+  div,
+  h4 {
     color: ${({ theme }) => theme.colors.contrast};
   }
   gap: 30px;
@@ -20,8 +37,11 @@ const Aside = styled.aside`
 type Props = {};
 
 export const SidePanel: FC<Props> = ({}) => {
+  const isRegular = useRecoilValue(regularViewAtom);
+
+
   return (
-    <Aside>
+    <Aside isRegular={isRegular}>
       <Contact isOnSide />
 
       <Languages />

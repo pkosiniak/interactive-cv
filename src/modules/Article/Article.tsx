@@ -5,12 +5,16 @@ import { Experience } from '../Experience';
 import { Education } from '../Education/Education';
 import { Skills } from '../Skills';
 import { Title } from '../Title';
+import { useRecoilValue } from 'recoil';
+import { regularViewAtom } from '@/store/viewAtom';
 
 type Props = {};
 
 export const MainArticle: FC<Props> = ({}) => {
+  const isRegular = useRecoilValue(regularViewAtom);
+
   return (
-    <Article>
+    <Article isRegular={isRegular}>
       <Title />
 
       <Summary />

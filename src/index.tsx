@@ -8,6 +8,7 @@ import { initReactI18next } from 'react-i18next';
 import I18NextHttpBackend from 'i18next-http-backend';
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
 import en from './locales/en';
+import pl from './locales/pl';
 
 i18next
   .use(I18nextBrowserLanguageDetector)
@@ -19,6 +20,9 @@ i18next
     resources: {
       en: {
         translation: en,
+      },
+      pl: {
+        translation: pl,
       },
     },
 
