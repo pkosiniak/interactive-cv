@@ -73,6 +73,7 @@ const recourses = {
     'Designing an application in ReactNative for Android with Bluetooth API support for communication with the esp32 board',
   thesisUsedTechnologies: 'TypeScript, ReactNative, Redux, ReduxSaga, Java, Python, Zerynth, C/C++',
   skills: 'Skills',
+  mainSkills: 'Main skills',
   languages: 'Languages',
   english: 'english',
   fullProfessional: '(Full Professional)',

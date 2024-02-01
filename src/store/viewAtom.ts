@@ -2,15 +2,15 @@ import { atom } from 'recoil';
 
 export enum VIEW {
   PRINT = 'PRINT',
-  REGULAR = 'REGULAR',
+  RESPONSIVE = 'RESPONSIVE',
 }
 
-export const regularViewAtom = atom({
-  key: 'REGULAR_VIEW',
+export const responsiveViewAtom = atom({
+  key: 'RESPONSIVE_VIEW',
   default: true,
 });
 
 export const viewAtom = atom({
   key: 'VIEW',
-  default: VIEW.REGULAR,
+  default: VIEW.RESPONSIVE,
 });

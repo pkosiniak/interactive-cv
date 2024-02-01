@@ -1,7 +1,13 @@
-import { H4, InlineText, Text } from '@/components';
+import { FlexBox, H4, InlineText, Text } from '@/components';
 import { FC } from 'react';
-import { Wrapper } from './parts';
 import { useTheme } from '@emotion/react';
+import styled from '@emotion/styled';
+
+export const Wrapper = styled(FlexBox)`
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+`;
 
 type Props = {};
 

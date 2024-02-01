@@ -5,6 +5,8 @@ import { Navigation24Filled } from '@fluentui/react-icons';
 import { css } from '@emotion/react';
 import { ToggleButton } from '@/components';
 
+const CONTROL_PANEL = 'CONTROL_PANEL';
+
 const toRight = css`
   left: auto;
   right: calc(41px - 100%);
@@ -37,7 +39,7 @@ const ControlsWrapper = styled.div`
 
 const Wrapper = styled.div`
   @media print {
-    * {
+    #${CONTROL_PANEL} {
       display: none;
     }
   }
@@ -50,13 +52,18 @@ export const ControlPanel: FC<Props> = ({}) => {
 
   return (
     <Wrapper>
-      <MenuWrapper toLeft={showControlPanel}>
+      <MenuWrapper toLeft={showControlPanel} id={CONTROL_PANEL}>
         <ToggleButton openIcon={<Navigation24Filled />} onChange={setShowControlPanel} />
+
         <ControlsWrapper>
           <ViewToggle />
-          <SidePanelToggle />
+
           <FontSizeToggle />
+
+          <SidePanelToggle />
+
           <LightsToggle />
+
           <LanguageSwitch />
         </ControlsWrapper>
       </MenuWrapper>

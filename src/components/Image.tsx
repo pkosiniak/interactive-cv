@@ -7,6 +7,10 @@ export const Image = styled.img`
 
 const SIZE = 50;
 
-export const Logo: FC<ImgHTMLAttributes<HTMLImageElement>> = props => {
-  return <Image width={SIZE} height={SIZE} {...props} />;
+type Props = ImgHTMLAttributes<HTMLImageElement> & {
+  size?: number;
+};
+
+export const Logo: FC<Props> = ({ size = SIZE, ...props }) => {
+  return <Image width={size} height={size} {...props} />;
 };

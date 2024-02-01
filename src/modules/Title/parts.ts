@@ -10,7 +10,6 @@ export const HeaderWrapper = styled.div`
 
 export const Header = styled.header`
   display: flex;
-  margin-bottom: 10px;
   gap: 20px;
 `;
 

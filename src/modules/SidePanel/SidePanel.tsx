@@ -3,8 +3,9 @@ import { FC } from 'react';
 import { Contact } from '../Contact';
 import { Languages } from '../Languages';
 import { useRecoilValue } from 'recoil';
-import { regularViewAtom } from '@/store';
+import { responsiveViewAtom } from '@/store';
 import { css } from '@emotion/react';
+import { MainSkills } from '../Skills/MainSkills';
 
 const printView = css`
   width: 6.5cm;
@@ -14,7 +15,7 @@ const printView = css`
 `;
 
 const regularView = css`
-  max-width: 350px;
+  width: 375px;
   padding-top: 80px;
   padding-right: 40px;
   padding-left: 40px;
@@ -37,12 +38,13 @@ const Aside = styled.aside<{ isRegular: boolean }>`
 type Props = {};
 
 export const SidePanel: FC<Props> = ({}) => {
-  const isRegular = useRecoilValue(regularViewAtom);
-
+  const isRegular = useRecoilValue(responsiveViewAtom);
 
   return (
     <Aside isRegular={isRegular}>
       <Contact isOnSide />
+
+      <MainSkills />
 
       <Languages />
     </Aside>

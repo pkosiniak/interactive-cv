@@ -2,23 +2,15 @@ import { FC } from 'react';
 import { H2, Section } from '@/components';
 import { HItem, HorizontalList } from './parts';
 import { Languages } from '../Languages';
+import { useRecoilValue } from 'recoil';
+import { flagsSelector } from '@/store';
+import { skills } from './constants';
 
 type Props = {};
 
-const skills = [
-  'TypeScript',
-  'React',
-  'Node.js',
-  'JavaScript',
-  'HTML',
-  'Cascading Style Sheets (CSS)',
-  'React-Native',
-  'Embedded Systems',
-  'Express.js',
-  'Redux',
-];
-
 export const Skills: FC<Props> = ({}) => {
+  const { isSidePanelOpen } = useRecoilValue(flagsSelector);
+
   return (
     <Section>
       <H2>skills</H2>
@@ -29,7 +21,7 @@ export const Skills: FC<Props> = ({}) => {
         ))}
       </HorizontalList>
 
-      <Languages />
+      {!isSidePanelOpen && <Languages />}
     </Section>
   );
 };

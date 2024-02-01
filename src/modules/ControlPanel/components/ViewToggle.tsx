@@ -8,14 +8,14 @@ import {
 import { IconContainer, Toggle } from './parts';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { useTheme } from '@emotion/react';
-import { VIEW, fontSizeAtom, largeFontStateAtom, regularViewAtom, viewAtom } from '@/store';
+import { VIEW, fontSizeAtom, largeFontStateAtom, responsiveViewAtom, viewAtom } from '@/store';
 import { FONT_SIZE } from '@/styles';
 
 type Props = {};
 
 export const ViewToggle: FC<Props> = ({}) => {
   const setView = useSetRecoilState(viewAtom);
-  const [isRegular, setIsRegular] = useRecoilState(regularViewAtom);
+  const [isRegular, setIsRegular] = useRecoilState(responsiveViewAtom);
   const setFontSize = useSetRecoilState(fontSizeAtom);
   const setIsLarge = useSetRecoilState(largeFontStateAtom);
 
@@ -29,7 +29,7 @@ export const ViewToggle: FC<Props> = ({}) => {
   const handleClick = useCallback(() => {
     const next = !isRegular;
     setIsRegular(next);
-    setView(next ? VIEW.PRINT : VIEW.REGULAR);
+    setView(next ? VIEW.PRINT : VIEW.RESPONSIVE);
     setIsLarge(next);
     setFontSize(next ? FONT_SIZE.LARGE : FONT_SIZE.SMALL);
   }, [isRegular]);

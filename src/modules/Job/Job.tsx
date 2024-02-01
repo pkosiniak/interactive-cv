@@ -1,8 +1,12 @@
-import { Box, H3, H4 } from '@/components';
+import { Box, H3 } from '@/components';
 import { Logo } from '@/components/Image';
 import { FCC } from '@/types';
 import { useTheme } from '@emotion/react';
 import { Container, LightH4, Wrapper } from './parts';
+import { useRecoilValue } from 'recoil';
+import { flagsSelector } from '@/store';
+
+const SMALL_LOGO_SIZE = 32;
 
 type Props = {
   position: string;
@@ -22,10 +26,12 @@ export const Job: FCC<Props> = ({
 }) => {
   const theme = useTheme();
 
+  const { isLargeFontSize } = useRecoilValue(flagsSelector);
+
   return (
     <Wrapper>
       <Container>
-        <Logo src={imgSrc} />
+        <Logo src={imgSrc} size={isLargeFontSize ? undefined : SMALL_LOGO_SIZE} />
 
         <Box>
           <H3>{company}</H3>
