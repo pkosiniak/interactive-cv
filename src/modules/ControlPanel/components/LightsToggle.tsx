@@ -1,4 +1,5 @@
 import { FC, useCallback, useMemo } from 'react';
+import { useRecoilState } from 'recoil';
 import {
   WeatherSunny20Regular,
   WeatherSunny20Filled,
@@ -6,7 +7,6 @@ import {
   WeatherMoon20Filled,
 } from '@fluentui/react-icons';
 import { useTheme } from '@emotion/react';
-import { useRecoilState } from 'recoil';
 import { darkModeAtom } from '@/store';
 import { IconContainer, Toggle } from './parts';
 

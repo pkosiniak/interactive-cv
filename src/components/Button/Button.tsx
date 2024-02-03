@@ -1,7 +1,7 @@
+import { ButtonHTMLAttributes } from 'react';
 import { FCC } from '@/types';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { ButtonHTMLAttributes } from 'react';
 
 const ghost = css`
   padding: 0;

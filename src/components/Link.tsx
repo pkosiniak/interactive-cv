@@ -1,9 +1,9 @@
+import { AnchorHTMLAttributes, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { color } from '@/styles/theme';
 import { FCC } from '@/types';
 import { asString, breakLineAt } from '@/utils/functions';
 import styled from '@emotion/styled';
-import { AnchorHTMLAttributes, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const Anchor = styled.a`
   ${color}

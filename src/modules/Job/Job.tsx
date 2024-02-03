@@ -1,10 +1,10 @@
+import { useRecoilValue } from 'recoil';
 import { Box, H3 } from '@/components';
 import { Logo } from '@/components/Image';
 import { FCC } from '@/types';
 import { useTheme } from '@emotion/react';
-import { Container, LightH4, Wrapper } from './parts';
-import { useRecoilValue } from 'recoil';
 import { flagsSelector } from '@/store';
+import { Container, LightH4, Wrapper } from './parts';
 
 const SMALL_LOGO_SIZE = 32;
 

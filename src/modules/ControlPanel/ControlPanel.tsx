@@ -1,11 +1,11 @@
-import { FontSizeToggle, LanguageSwitch, LightsToggle, SidePanelToggle, ViewToggle } from './components';
-import styled from '@emotion/styled';
 import { FC, useState } from 'react';
+import { useRecoilValue } from 'recoil';
+import styled from '@emotion/styled';
 import { ChevronLeft24Filled } from '@fluentui/react-icons';
 import { css } from '@emotion/react';
 import { ToggleButton } from '@/components';
-import { useRecoilValue } from 'recoil';
 import { flagsSelector } from '@/store';
+import { FontSizeToggle, LanguageSwitch, LightsToggle, SidePanelToggle, ViewToggle } from './components';
 
 const CONTROL_PANEL = 'CONTROL_PANEL';
 

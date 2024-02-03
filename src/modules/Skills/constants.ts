@@ -10,4 +10,4 @@ const otherSkills = [
   'Redux',
 ];
 
-export const skills = [...mainSkills, ...otherSkills]
+export const skills = [...mainSkills, ...otherSkills];

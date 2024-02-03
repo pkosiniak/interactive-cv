@@ -68,19 +68,19 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     // "import/prefer-default-export": "off",   /* TBD */
     /* TBD */
-    // 'import/order': [
-    //     'error',
-    //     {
-    //       groups: ['builtin', 'external', 'internal', ['index', 'sibling', 'parent']],
-    //       pathGroupsExcludedImportTypes: ['builtin'],
-    //       pathGroups: [
-    //         {
-    //           pattern: '@**/**',
-    //           group: 'internal',
-    //           position: 'after',
-    //         },
-    //       ],
-    //     },
-    //   ],
+    'import/order': [
+        'error',
+        {
+          groups: ['builtin', 'external', 'internal', ['index', 'sibling', 'parent']],
+          pathGroupsExcludedImportTypes: ['builtin'],
+          pathGroups: [
+            {
+              pattern: '@**/**',
+              group: 'internal',
+              position: 'after',
+            },
+          ],
+        },
+      ],
   },
 };

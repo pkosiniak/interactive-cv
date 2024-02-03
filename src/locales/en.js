@@ -79,7 +79,7 @@ const recourses = {
   fullProfessional: '(Full Professional)',
   createdBy: 'Created by',
   redBabel: 'Red Babel',
-  copied: 'Copied'
+  copied: 'Copied',
 };
 
 export default recourses;

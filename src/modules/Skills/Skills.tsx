@@ -1,9 +1,9 @@
 import { FC } from 'react';
+import { useRecoilValue } from 'recoil';
 import { H2, Section } from '@/components';
+import { flagsSelector } from '@/store';
 import { HItem, HorizontalList } from './parts';
 import { Languages } from '../Languages';
-import { useRecoilValue } from 'recoil';
-import { flagsSelector } from '@/store';
 import { skills } from './constants';
 
 type Props = {};

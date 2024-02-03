@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
 import { useCallback, useEffect, useState } from 'react';
-import { Button, ButtonProps } from './Button';
-import { FCC } from '@/types';
 import { useTranslation } from 'react-i18next';
+import { FCC } from '@/types';
+import styled from '@emotion/styled';
 import { Copy20Regular } from '@fluentui/react-icons';
+import { Button, ButtonProps } from './Button';
 
 const TIMEOUT = 2000;
 

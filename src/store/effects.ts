@@ -1,5 +1,5 @@
-import { isNullable } from '@/utils/functions';
 import { AtomEffect } from 'recoil';
+import { isNullable } from '@/utils/functions';
 
 export const persistEffect =
   <T>(key: string): AtomEffect<T> =>

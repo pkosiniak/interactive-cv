@@ -1,7 +1,7 @@
 import { atom } from 'recoil';
-import { persistEffect } from './effects';
 import { getWindowWidth } from '@/utils/functions';
 import { themeLight } from '@/styles';
+import { persistEffect } from './effects';
 
 const SIDE_PANEL = 'SIDE_PANEL';
 

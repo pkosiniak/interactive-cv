@@ -1,8 +1,8 @@
+import { useTranslation } from 'react-i18next';
+import { LiHTMLAttributes } from 'react';
 import styled from '@emotion/styled';
 import { FCC } from '../types';
 import { isString } from '../utils/functions';
-import { useTranslation } from 'react-i18next';
-import { LiHTMLAttributes } from 'react';
 
 export const List = styled.ul`
   margin: 0;

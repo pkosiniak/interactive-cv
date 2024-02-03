@@ -1,12 +1,12 @@
-import { CopyButton, H4, Link } from '@/components';
 import { FC, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Container, LinkWrapper, Wrapper } from './parts';
+import { useRecoilValue } from 'recoil';
 import { useTheme } from '@emotion/react';
 import { Mail24Regular, Phone24Regular } from '@fluentui/react-icons';
 import { LinkedInIcon } from '@/components/Icons';
-import { useRecoilValue } from 'recoil';
+import { CopyButton, H4, Link } from '@/components';
 import { flagsSelector } from '@/store/flagsSelector';
+import { Container, LinkWrapper, Wrapper } from './parts';
 
 type Props = {
   isOnSide?: boolean;

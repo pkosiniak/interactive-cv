@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { FlexBox, H4 } from '@/components';
+import styled from '@emotion/styled';
 import { DiscreetLi, DiscreetList } from './parts';
 import { mainSkills } from './constants';
-import styled from '@emotion/styled';
 
 type Props = {};
 

@@ -1,13 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
+import { color } from '@/styles/theme';
 import { FCC } from '../types';
 import { isString } from '../utils/functions';
-import { useTranslation } from 'react-i18next';
-import { color } from '@/styles/theme';
 
 type Props = {
   text?: string;
   color?: string;
-  className?: string
+  className?: string;
 };
 
 const Div = styled.div`

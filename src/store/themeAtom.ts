@@ -9,4 +9,4 @@ export const darkModeAtom = atom({
   effects: [persistEffect(DARK_MODE)],
 });
 
-export const isThemePersisted = () => !!localStorage.getItem(DARK_MODE)
+export const isThemePersisted = () => !!localStorage.getItem(DARK_MODE);

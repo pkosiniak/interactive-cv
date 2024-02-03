@@ -1,15 +1,15 @@
 import { FC, useCallback, useMemo } from 'react';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import {
   FontDecrease20Regular,
   FontIncrease20Regular,
   FontDecrease20Filled,
   FontIncrease20Filled,
 } from '@fluentui/react-icons';
-import { IconContainer, Toggle } from './parts';
-import { useRecoilState, useSetRecoilState } from 'recoil';
 import { fontSizeAtom, largeFontStateAtom } from '@/store';
 import { FONT_SIZE } from '@/styles';
 import { useTheme } from '@emotion/react';
+import { IconContainer, Toggle } from './parts';
 
 type Props = {};
 

@@ -16,4 +16,3 @@ export const getWindowWidth = () =>
     // window.innerWidth,
     window.screen.width
   );
-  

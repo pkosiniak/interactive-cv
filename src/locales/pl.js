@@ -8,14 +8,14 @@ const recourses = {
   cracowLocation: 'Kraków, Małopolska, Polska',
   summaryTitle: 'Podsumowanie',
   summaryText:
-    'Jestem młodym i kreatywnym programistą, chętnie podejmującym wyzwania, szybko uczącym się nowych technologii, który lubi stosować nieszablonowe podejścia i znajdować nowe, lub nieoczywiste rozwiązania. Pierwotnie chciałem zostać akustykiem, jednak szybko zrozumiałem, że jako informatyk programista, mogę osiągnąć o wiele więcej, tworzyć coś bardziej „namacalnego”. W 2019 zainteresowałem się React\'em i zacząłem pisać pierwsze projekty w tej technologii, a zaraz potem wziąłem udział w stażu organizowanym przez x-kom, gdzie pracowałem nad częścią strony sklepu internetowego. Swoją pracę inżynierską bazującą na React Native i systemach wbudowanych obroniłem w 2020 roku. Od tego czasu pracowałem nad kilkoma różnymi projektami głównie w React, ale też Express, React-Native. Obecnie, poza kontynuacją pracy we front-endzie, jestem zainteresowany rozwijaniem swojej wiedzy i umiejętności w technologiach back-endowych.',
+    "Jestem młodym i kreatywnym programistą, chętnie podejmującym wyzwania, szybko uczącym się nowych technologii, który lubi stosować nieszablonowe podejścia i znajdować nowe, lub nieoczywiste rozwiązania. Pierwotnie chciałem zostać akustykiem, jednak szybko zrozumiałem, że jako informatyk programista, mogę osiągnąć o wiele więcej, tworzyć coś bardziej „namacalnego”. W 2019 zainteresowałem się React'em i zacząłem pisać pierwsze projekty w tej technologii, a zaraz potem wziąłem udział w stażu organizowanym przez x-kom, gdzie pracowałem nad częścią strony sklepu internetowego. Swoją pracę inżynierską bazującą na React Native i systemach wbudowanych obroniłem w 2020 roku. Od tego czasu pracowałem nad kilkoma różnymi projektami głównie w React, ale też Express, React-Native. Obecnie, poza kontynuacją pracy we front-endzie, jestem zainteresowany rozwijaniem swojej wiedzy i umiejętności w technologiach back-endowych.",
   experience: 'Doświadczenie',
   coderyLabs: 'CoderyLabs',
   fullStack: 'Fullstack Developer',
   coderyDuration: 'Kwiecień 2021 - Październik 2023 (2 lata 7 mies.)',
   projects: 'Projekty:',
   adminPanel: 'Panel administracyjny',
-  adminPanelPosition: 'programista w SCRUM\'owym zespole front-end\'owym',
+  adminPanelPosition: "programista w SCRUM'owym zespole front-end'owym",
   adminPanelTechs: 'technologie: react, typescript, react-redux, rxjs, mui, emotion, yup, formik',
   adminPanelTests: 'testy: jest, enzyme',
   customMade: 'Sklep internetowy',
@@ -25,7 +25,7 @@ const recourses = {
   vsePosition: 'programista front-end',
   vseTechs: 'technologie: html, css, javascript, liferay',
   zdolniaki: 'Wyszukiwarka zajęć',
-  zdolniakiPosition: 'programista full-stack i team lider niewielkiego zespołu full-stack\'owego',
+  zdolniakiPosition: "programista full-stack i team lider niewielkiego zespołu full-stack'owego",
   zdolniakiTechs:
     'technologie: react, typescript, next, emotion, ajv, express, passport, tsoa, typeorm, nodemailer, swagger-ui-express',
   zdolniakiTests: 'testy: jest, supertest',
@@ -41,7 +41,7 @@ const recourses = {
   xkomBullet2: 'testowanie kodu',
   xkomBullet3: 'integracja części aplikacji z wewnętrznym API',
   xkomBullet4: 'pisanie dedykowanych algorytmów do obsługi interakcji i wyświetlania komponentów',
-  xkomBullet5: 'Praca w zespole SCRUM\'owym',
+  xkomBullet5: "Praca w zespole SCRUM'owym",
   usedTechnologies: 'Użyte technologie:',
   xkomUsedTechnologies: 'TypeScript, React, Redux, Redux-Saga, Styled-Components, Jest, Jest-Enzyme, Azure DevOps',
   acoustician: 'Akustyk, DJ',
@@ -65,7 +65,7 @@ const recourses = {
   thesisRequirements: 'Napisanie pracy wymagało:',
   thesisBullet1:
     'Przeprowadzenia analizy zagrożeń związanych z bezpieczeństwem komunikacji bezprzewodowej w tym Bluetooth Low Energy 4.2',
-  thesisBullet2: 'Zbudowania na bazie płytki NodeMCU esp32 oraz Arduino Nano prototypu immobilizer\'a',
+  thesisBullet2: "Zbudowania na bazie płytki NodeMCU esp32 oraz Arduino Nano prototypu immobilizer'a",
   thesisBullet3: 'Napisania programu uruchomieniowego dla esp32 na maszynie wirtualnej Zerynth w języku Python',
   thesisBullet4:
     'Stworzenia API obsługującego wywarzenia typu GAP i GATT dla modułu BLE w oparciu komunikację o szyfrowaną protokołem ECDH',

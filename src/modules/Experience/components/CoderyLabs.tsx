@@ -1,5 +1,5 @@
-import { Description, H5, Paragraph, List, Text, Box, ListItem } from '@/components';
 import { FC } from 'react';
+import { Description, H5, Paragraph, List, Text, Box, ListItem } from '@/components';
 import styled from '@emotion/styled';
 
 type Props = {};

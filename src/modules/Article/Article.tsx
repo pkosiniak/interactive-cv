@@ -1,14 +1,14 @@
 import { FC } from 'react';
+import { useRecoilValue } from 'recoil';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+import { flagsSelector } from '@/store';
 import { Summary } from '../Summary';
 import { Experience } from '../Experience';
 import { Education } from '../Education/Education';
 import { Skills } from '../Skills';
 import { Title } from '../Title';
-import { useRecoilValue } from 'recoil';
-import styled from '@emotion/styled';
 import { PRINT_BREAK, Theme, breakpoint } from '../../styles/theme';
-import { css } from '@emotion/react';
-import { flagsSelector } from '@/store';
 import { Footer } from '../Footer';
 
 const printView = css`

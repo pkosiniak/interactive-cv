@@ -14,7 +14,6 @@ export const Container = styled(FlexBox)`
   flex-wrap: wrap;
 `;
 
-
 export const LinkWrapper = styled(FlexBox)`
   align-items: center;
   gap: 5px;

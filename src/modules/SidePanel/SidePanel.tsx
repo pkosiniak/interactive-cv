@@ -1,10 +1,10 @@
-import styled from '@emotion/styled';
 import { FC } from 'react';
-import { Contact } from '../Contact';
-import { Languages } from '../Languages';
 import { useRecoilValue } from 'recoil';
+import styled from '@emotion/styled';
 import { viewAtom } from '@/store';
 import { css } from '@emotion/react';
+import { Languages } from '../Languages';
+import { Contact } from '../Contact';
 import { MainSkills } from '../Skills/MainSkills';
 
 const printView = css`

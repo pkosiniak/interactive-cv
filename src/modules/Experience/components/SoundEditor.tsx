@@ -1,5 +1,5 @@
-import { Description, List, ListItem, Text } from '@/components';
 import { FC } from 'react';
+import { Description, List, ListItem, Text } from '@/components';
 
 type Props = {};
 

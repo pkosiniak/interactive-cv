@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Section, H2, List, Text, Description, ListItem } from '@/components';
-import { Job } from '../Job';
 import { PRINT_BREAK } from '@/styles';
+import { Job } from '../Job';
 
 type Props = {};
 

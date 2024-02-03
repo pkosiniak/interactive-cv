@@ -52,8 +52,6 @@ export type Theme = typeof themeLight;
 export type Colors = Theme['colors'];
 export type Color = keyof Colors;
 
-export const useTheme = () => useThemeHook() as Theme;
-
 export type ColorProps = {
   color?: string;
 };

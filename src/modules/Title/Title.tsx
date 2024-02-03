@@ -1,10 +1,10 @@
 import { FC, useMemo } from 'react';
-import { H1, H3 } from '../../components/Heading';
-import { useTheme } from '../../styles/theme';
-import { Header, HeaderWrapper, LightH3, Photo, PhotoContainer, TitleContainer } from './parts';
-import { Contact } from '../Contact';
 import { useRecoilValue } from 'recoil';
 import { flagsSelector } from '@/store';
+import { useTheme } from '@emotion/react';
+import { H1, H3 } from '../../components/Heading';
+import { Header, HeaderWrapper, LightH3, Photo, PhotoContainer, TitleContainer } from './parts';
+import { Contact } from '../Contact';
 
 type Props = {};
 

@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { Job } from '../Job/Job';
 import { Section } from '@/components/Section';
 import { H2 } from '@/components';
-import { CoderyLabs, Xkom, Acoustician, SoundEditor } from './components';
 import { PRINT_BREAK } from '@/styles';
+import { CoderyLabs, Xkom, Acoustician, SoundEditor } from './components';
+import { Job } from '../Job/Job';
 
 type Props = {};
 

@@ -1,10 +1,10 @@
+import { FC, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useRecoilState } from 'recoil';
 import { Button } from '@/components';
 import { GBIcon, PLIcon } from '@/components/Icons';
 import { LANGUAGE, languageAtom } from '@/store';
 import styled from '@emotion/styled';
-import { FC, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useRecoilState } from 'recoil';
 
 const Wrapper = styled.div`
   width: 60px;

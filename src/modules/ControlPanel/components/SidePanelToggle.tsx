@@ -1,14 +1,14 @@
 import { FC, useCallback, useMemo } from 'react';
+import { useRecoilState } from 'recoil';
 import {
   PanelLeftContract20Regular,
   PanelLeftContract20Filled,
   PanelLeftExpand20Regular,
   PanelLeftExpand20Filled,
 } from '@fluentui/react-icons';
-import { IconContainer, Toggle } from './parts';
-import { useRecoilState } from 'recoil';
 import { useTheme } from '@emotion/react';
 import { sidePanelAtom } from '@/store';
+import { IconContainer, Toggle } from './parts';
 
 type Props = {};
 

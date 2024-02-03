@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
 import { FC, ImgHTMLAttributes } from 'react';
+import styled from '@emotion/styled';
 
 export const Image = styled.img`
   margin-top: 5px;

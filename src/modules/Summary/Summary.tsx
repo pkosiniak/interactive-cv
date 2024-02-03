@@ -1,5 +1,5 @@
-import { Section, H2 } from '@/components';
 import { FC } from 'react';
+import { Section, H2 } from '@/components';
 import { SummaryText } from './parts';
 
 type Props = {};
