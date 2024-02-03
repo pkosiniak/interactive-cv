@@ -9,7 +9,7 @@ import { skills } from './constants';
 type Props = {};
 
 export const Skills: FC<Props> = ({}) => {
-  const { isSidePanelOpen } = useRecoilValue(flagsSelector);
+  const { isSidePanelOpen, isMobile } = useRecoilValue(flagsSelector);
 
   return (
     <Section>
@@ -21,7 +21,7 @@ export const Skills: FC<Props> = ({}) => {
         ))}
       </HorizontalList>
 
-      {!isSidePanelOpen && <Languages />}
+      {(!isSidePanelOpen || isMobile) && <Languages />}
     </Section>
   );
 };

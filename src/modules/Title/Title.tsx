@@ -14,7 +14,7 @@ const SMALL_SIZE = 100;
 export const Title: FC<Props> = ({}) => {
   const theme = useTheme();
 
-  const { isSidePanelOpen, isLargeFontSize } = useRecoilValue(flagsSelector);
+  const { isSidePanelOpen, isLargeFontSize, isMobile } = useRecoilValue(flagsSelector);
 
   const size = useMemo(() => (isLargeFontSize ? LARGE_SIZE : SMALL_SIZE), [isLargeFontSize]);
 
@@ -34,7 +34,7 @@ export const Title: FC<Props> = ({}) => {
         </TitleContainer>
       </Header>
 
-      {!isSidePanelOpen && <Contact />}
+      {(!isSidePanelOpen || isMobile) && <Contact />}
     </HeaderWrapper>
   );
 };

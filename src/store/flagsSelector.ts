@@ -1,6 +1,6 @@
 import { selector } from 'recoil';
 import { largeFontStateAtom } from './fontSizeAtom';
-import { sidePanelAtom } from './sidePanelAtom';
+import { mobileAtom, sidePanelAtom } from './sidePanelAtom';
 import { darkModeAtom } from './themeAtom';
 import { viewAtom } from './viewAtom';
 
@@ -11,12 +11,14 @@ export const flagsSelector = selector({
     const isSidePanelOpen = get(sidePanelAtom);
     const isDarkMode = get(darkModeAtom);
     const isResponsiveView = get(viewAtom);
+    const isMobile = get(mobileAtom);
 
     return {
       isLargeFontSize,
       isSidePanelOpen,
       isDarkMode,
       isResponsiveView,
+      isMobile,
     };
   },
 });

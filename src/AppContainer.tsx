@@ -1,4 +1,4 @@
-import { FC, useLayoutEffect, useMemo } from 'react';
+import { FC, useCallback, useEffect, useLayoutEffect, useMemo } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
@@ -6,8 +6,9 @@ import { ThemeProvider } from '@emotion/react';
 import { MainArticle } from './modules/Article';
 import { ControlPanel } from './modules/ControlPanel';
 import { SidePanel } from './modules/SidePanel';
-import { darkModeAtom, fontSizeAtom, isThemePersisted, sidePanelAtom } from './store';
+import { darkModeAtom, fontSizeAtom, isThemePersisted, mobileAtom, sidePanelAtom } from './store';
 import { GlobalStyles, Theme, themeDark, themeLight } from './styles';
+import { getWindowWidth } from './utils/functions';
 
 export const Container = styled.div`
   background-color: ${({ theme }) => (theme as Theme).colors.body};
@@ -23,6 +24,7 @@ export const Main = styled.main`
 
 export const AppContainer: FC = () => {
   const [isDarkMode, setIsDarkMode] = useRecoilState(darkModeAtom);
+  const [isMobile, setIsMobile] = useRecoilState(mobileAtom);
   const fontSize = useRecoilValue(fontSizeAtom);
   const showSidePanel = useRecoilValue(sidePanelAtom);
 
@@ -37,13 +39,23 @@ export const AppContainer: FC = () => {
       setIsDarkMode(!!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches));
   }, []);
 
+  const handleResize = useCallback(() => {
+    const width = getWindowWidth();
+    setIsMobile(width <= theme.breakpoint.medium);
+  }, [getWindowWidth]);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Container>
         <Main>
           <ControlPanel />
-          {showSidePanel && <SidePanel />}
+          {showSidePanel && !isMobile && <SidePanel />}
           <MainArticle />
         </Main>
       </Container>

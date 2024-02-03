@@ -1,6 +1,11 @@
 import { asString } from '@/utils/functions';
 import { css, useTheme as useThemeHook } from '@emotion/react';
 
+export const breakpoint = Object.freeze({
+  small: 520,
+  medium: 800,
+});
+
 const lightColors = {
   text: '#000',
   dark: '#333',
@@ -18,7 +23,8 @@ const lightColors = {
 };
 
 export const themeLight = {
-  colors: lightColors,
+  colors: Object.freeze(lightColors),
+  breakpoint,
 };
 
 const darkColors: Colors = {
@@ -38,7 +44,8 @@ const darkColors: Colors = {
 };
 
 export const themeDark = {
-  colors: darkColors,
+  colors: Object.freeze(darkColors),
+  breakpoint,
 };
 
 export type Theme = typeof themeLight;

@@ -6,7 +6,7 @@ import { Skills } from '../Skills';
 import { Title } from '../Title';
 import { useRecoilValue } from 'recoil';
 import styled from '@emotion/styled';
-import { PRINT_BREAK, Theme } from '../../styles/theme';
+import { PRINT_BREAK, Theme, breakpoint } from '../../styles/theme';
 import { css } from '@emotion/react';
 import { flagsSelector } from '@/store';
 import { Footer } from '../Footer';
@@ -22,11 +22,23 @@ const printView = css`
 const responsiveView = css`
   max-width: 825px;
   padding: 80px 40px;
+
+  @media only screen and (max-width: ${breakpoint.small}px) {
+    padding: 80px 20px;
+  }
 `;
 
 const responsiveWithoutSidePanel = css`
   max-width: 1200px;
   padding: 80px 60px;
+
+  @media only screen and (max-width: ${breakpoint.medium}px) {
+    padding: 80px 40px;
+  }
+
+  @media only screen and (max-width: ${breakpoint.small}px) {
+    padding: 80px 20px;
+  }
 `;
 
 const printWithoutSidePanel = css`
