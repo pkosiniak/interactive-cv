@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { useRecoilValue } from 'recoil';
 import styled from '@emotion/styled';
-import { viewAtom } from '@/store';
 import { css } from '@emotion/react';
+import { viewAtom } from '@/store';
 import { Languages } from '../Languages';
 import { Contact } from '../Contact';
 import { MainSkills } from '../Skills/MainSkills';

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
+import { HTMLAttributes } from 'react';
 import * as P from './parts';
 import { FCC } from '../../types';
 import { asString } from '../../utils/functions';
-import { HTMLAttributes } from 'react';
 
 type Props = HTMLAttributes<HTMLHeadingElement> & {
   text?: string;

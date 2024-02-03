@@ -6,9 +6,9 @@ import {
   FontDecrease20Filled,
   FontIncrease20Filled,
 } from '@fluentui/react-icons';
+import { useTheme } from '@emotion/react';
 import { fontSizeAtom, largeFontStateAtom } from '@/store';
 import { FONT_SIZE } from '@/styles';
-import { useTheme } from '@emotion/react';
 import { IconContainer, Toggle } from './parts';
 
 type Props = {};

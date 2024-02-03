@@ -1,5 +1,5 @@
-import { FlexBox, H4 } from '@/components';
 import styled from '@emotion/styled';
+import { FlexBox, H4 } from '@/components';
 
 export const Wrapper = styled(FlexBox)`
   flex-direction: column;

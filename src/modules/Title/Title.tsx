@@ -1,7 +1,7 @@
 import { FC, useMemo } from 'react';
 import { useRecoilValue } from 'recoil';
-import { flagsSelector } from '@/store';
 import { useTheme } from '@emotion/react';
+import { flagsSelector } from '@/store';
 import { H1, H3 } from '../../components/Heading';
 import { Header, HeaderWrapper, LightH3, Photo, PhotoContainer, TitleContainer } from './parts';
 import { Contact } from '../Contact';

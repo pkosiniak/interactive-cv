@@ -1,7 +1,7 @@
-import { ColorProps, color, fill, toCssValue } from '@/styles/theme';
-import { FCC } from '@/types';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { ColorProps, color, fill, toCssValue } from '@/styles/theme';
+import { FCC } from '@/types';
 
 export type SizeProps = {
   size?: number | string;

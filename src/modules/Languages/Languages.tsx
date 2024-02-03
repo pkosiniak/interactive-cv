@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { FlexBox, H4, InlineText, Text } from '@/components';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
+import { FlexBox, H4, InlineText, Text } from '@/components';
 
 export const Wrapper = styled(FlexBox)`
   flex-direction: column;

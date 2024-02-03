@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { RedBabelIcon } from '@/components/Icons';
-import { PRINT_BREAK } from '@/styles';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
+import { RedBabelIcon } from '@/components/Icons';
+import { PRINT_BREAK } from '@/styles';
 
 const StyledFooter = styled.footer`
   margin-top: 150px;

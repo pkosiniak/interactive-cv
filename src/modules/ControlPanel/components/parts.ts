@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
-import { Button } from '../../../components/Button';
-import { css } from '@emotion/react';
-
-const SIZE = '28px';
+import { Button } from '@/components/Button';
 
 export const Toggle = styled(Button)`
   background-color: ${({ theme }) => theme.colors.background};
@@ -18,5 +15,4 @@ export const IconContainer = styled.div`
   align-items: center;
   border-radius: 50px;
   padding: 4px;
-  /* position: absolute; */
 `;

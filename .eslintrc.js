@@ -23,7 +23,7 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
     '@typescript-eslint/no-unused-vars': [
       // TODO: change to error
-      'warn',
+      'error',
       {
         vars: 'local',
         ignoreRestSiblings: true,
@@ -75,7 +75,7 @@ module.exports = {
           pathGroupsExcludedImportTypes: ['builtin'],
           pathGroups: [
             {
-              pattern: '@**/**',
+              pattern: '@/**',
               group: 'internal',
               position: 'after',
             },

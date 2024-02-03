@@ -1,6 +1,6 @@
+import styled from '@emotion/styled';
 import { Button, FlexBox } from '@/components';
 import { color, fill } from '@/styles/theme';
-import styled from '@emotion/styled';
 
 export const Wrapper = styled(FlexBox)`
   ${color}

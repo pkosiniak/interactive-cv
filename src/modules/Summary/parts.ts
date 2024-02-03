@@ -1,5 +1,5 @@
-import { FlexBox, Text } from '@/components';
 import styled from '@emotion/styled';
+import { FlexBox, Text } from '@/components';
 
 export const Container = styled(FlexBox)`
   flex-direction: column;

@@ -1,5 +1,5 @@
+import { css } from '@emotion/react';
 import { asString } from '@/utils/functions';
-import { css, useTheme as useThemeHook } from '@emotion/react';
 
 export const breakpoint = Object.freeze({
   small: 520,

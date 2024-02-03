@@ -1,7 +1,7 @@
-import { FlexBox } from '@/components';
-import { color } from '@/styles/theme';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { FlexBox } from '@/components';
+import { color } from '@/styles/theme';
 
 export const Wrapper = styled(FlexBox)`
   ${color}

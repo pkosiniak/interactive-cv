@@ -1,8 +1,8 @@
 import { useRecoilValue } from 'recoil';
+import { useTheme } from '@emotion/react';
 import { Box, H3 } from '@/components';
 import { Logo } from '@/components/Image';
 import { FCC } from '@/types';
-import { useTheme } from '@emotion/react';
 import { flagsSelector } from '@/store';
 import { Container, LightH4, Wrapper } from './parts';
 
