@@ -6,17 +6,13 @@ import {
   WeatherMoon20Filled,
 } from '@fluentui/react-icons';
 import { useTheme } from '@emotion/react';
-import { themeDark, themeLight } from '@/styles/theme';
-import { useRecoilState, useSetRecoilState } from 'recoil';
-import { darkModeAtom, themeAtom } from '@/store';
+import { useRecoilState } from 'recoil';
+import { darkModeAtom } from '@/store';
 import { IconContainer, Toggle } from './parts';
-
-
 
 type Props = {};
 
 export const LightsToggle: FC<Props> = ({}) => {
-  const setCurrentTheme = useSetRecoilState(themeAtom);
   const [isDarkMode, setIsDarkMode] = useRecoilState(darkModeAtom);
 
   const theme = useTheme();
@@ -28,7 +24,6 @@ export const LightsToggle: FC<Props> = ({}) => {
 
   const handleClick = useCallback(() => {
     const next = !isDarkMode;
-    setCurrentTheme(next ? themeDark : themeLight);
     setIsDarkMode(next);
   }, [isDarkMode]);
 

@@ -3,7 +3,7 @@ import { FC, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Container, LinkWrapper, Wrapper } from './parts';
 import { useTheme } from '@emotion/react';
-import { Mail24Regular, Phone24Regular } from '@fluentui/react-icons';
+import { Mail24Regular, Phone24Regular, Globe20Regular } from '@fluentui/react-icons';
 import { LinkedInIcon } from '@/components/Icons';
 import { useRecoilValue } from 'recoil';
 import { flagsSelector } from '@/store/flagsSelector';
@@ -15,25 +15,21 @@ type Props = {
 export const Contact: FC<Props> = ({ isOnSide = false }) => {
   const { t } = useTranslation();
   const theme = useTheme();
-  const { isResponsiveView, isLargeFontSize } = useRecoilValue(flagsSelector);
+  const { isResponsiveView } = useRecoilValue(flagsSelector);
 
   const mailHref = useMemo(() => `mailto:${t('email')}`, [t]);
   const phoneHref = useMemo(() => `tel:${t('phone')}`, [t]);
   const likedInHref = useMemo(() => `https://www.${t('linkedIn')}`, [t]);
 
   const sideColor = useMemo(() => (isOnSide ? theme.colors.contrast : undefined), [isOnSide]);
-
-  const shouldSplit = useMemo(
-    () => isOnSide && !isResponsiveView && isLargeFontSize,
-    [isOnSide, isResponsiveView, isLargeFontSize]
-  );
+  const shouldSplit = useMemo(() => isOnSide, [isOnSide]);
 
   return (
     <Wrapper>
       {isOnSide && <H4 color={sideColor}>contact</H4>}
 
       <Container>
-        <LinkWrapper color={isOnSide ? theme.colors.mediumLight : undefined}>
+        <LinkWrapper isOnSide={isOnSide}>
           <Mail24Regular />
 
           <Link href={mailHref} color={sideColor} breakAt={shouldSplit ? '@' : ''}>
@@ -43,7 +39,7 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
           <CopyButton textToCopy={t('email')} hidden={!isResponsiveView} />
         </LinkWrapper>
 
-        <LinkWrapper>
+        <LinkWrapper isOnSide={isOnSide}>
           <Phone24Regular />
 
           <Link href={phoneHref} color={sideColor}>
@@ -55,7 +51,7 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
       </Container>
 
       <Container>
-        <LinkWrapper>
+        <LinkWrapper isOnSide={isOnSide}>
           <LinkedInIcon color={sideColor} />
 
           <Link
@@ -69,6 +65,22 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
           </Link>
 
           <CopyButton textToCopy={t('linkedIn')} hidden={!isResponsiveView} />
+        </LinkWrapper>
+
+        <LinkWrapper isOnSide={isOnSide}>
+          <Globe20Regular color={sideColor} />
+
+          <Link
+            href={'about:blank'}
+            target='_blank'
+            rel='noopener noreferrer'
+            color={sideColor}
+            // breakAt={shouldSplit ? '' : ''}
+          >
+            placeholder
+          </Link>
+
+          <CopyButton textToCopy={t('placeholder')} hidden={!isResponsiveView} />
         </LinkWrapper>
       </Container>
     </Wrapper>

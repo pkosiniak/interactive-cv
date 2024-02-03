@@ -1,5 +1,6 @@
-import { Button, FlexBox } from '@/components';
-import { color, fill } from '@/styles/theme';
+import { FlexBox } from '@/components';
+import { color } from '@/styles/theme';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 export const Wrapper = styled(FlexBox)`
@@ -10,12 +11,15 @@ export const Wrapper = styled(FlexBox)`
 
 export const Container = styled(FlexBox)`
   gap: 10px;
-  justify-content: space-between;
   flex-wrap: wrap;
 `;
 
+type WrapperProps = {
+  isOnSide?: boolean;
+};
 
-export const LinkWrapper = styled(FlexBox)`
+export const LinkWrapper = styled(FlexBox)<WrapperProps>`
+  flex-grow: 1;
   align-items: center;
   gap: 5px;
 
@@ -24,12 +28,11 @@ export const LinkWrapper = styled(FlexBox)`
     fill: ${({ theme }) => theme.colors.transparent};
   }
 
-  &:hover button {
-    color: ${({ theme }) => theme.colors.medium};
-    fill: ${({ theme }) => theme.colors.medium};
-    ${color}
-    ${fill}
+  &:hover button,
+  &:hover a {
+    ${({ theme: { colors }, isOnSide }) => css`
+      color: ${isOnSide ? colors.light : colors.medium};
+      fill: ${isOnSide ? colors.light : colors.medium};
+    `}
   }
 `;
-
-export const CopyButton = styled(Button)``;

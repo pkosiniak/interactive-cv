@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Section, H2, List, Text, Description, ListItem } from '@/components';
 import { Job } from '../Job';
+import { PRINT_BREAK } from '@/styles';
 
 type Props = {};
 
@@ -25,7 +26,7 @@ export const Education: FC<Props> = ({}) => {
             <ListItem>thesisBullet2</ListItem>
             <ListItem>thesisBullet3</ListItem>
             <ListItem>thesisBullet4</ListItem>
-            <ListItem>thesisBullet5</ListItem>
+            <ListItem className={PRINT_BREAK}>thesisBullet5</ListItem>
           </List>
 
           <Text>usedTechnologies</Text>

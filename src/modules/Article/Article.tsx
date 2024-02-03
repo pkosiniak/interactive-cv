@@ -6,9 +6,10 @@ import { Skills } from '../Skills';
 import { Title } from '../Title';
 import { useRecoilValue } from 'recoil';
 import styled from '@emotion/styled';
-import { Theme } from '../../styles/theme';
+import { PRINT_BREAK, Theme } from '../../styles/theme';
 import { css } from '@emotion/react';
 import { flagsSelector } from '@/store';
+import { Footer } from '../Footer';
 
 const printView = css`
   width: 14.5cm;
@@ -53,6 +54,16 @@ export const StyledArticle = styled.article<StyledArticleProps>`
 
   background-color: ${({ theme }) => (theme as Theme).colors.background};
   gap: 2.5rem;
+
+  .${PRINT_BREAK} {
+  }
+
+  @media print {
+    .${PRINT_BREAK} {
+      margin-top: 2cm;
+      page-break-before: always;
+    }
+  }
 `;
 
 type Props = {};
@@ -71,6 +82,8 @@ export const MainArticle: FC<Props> = ({}) => {
       <Education />
 
       <Skills />
+
+      <Footer />
     </StyledArticle>
   );
 };

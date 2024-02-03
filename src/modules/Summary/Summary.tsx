@@ -1,5 +1,6 @@
-import { Section, H2, Text } from '@/components';
+import { Section, H2 } from '@/components';
 import { FC } from 'react';
+import { SummaryText } from './parts';
 
 type Props = {};
 
@@ -8,7 +9,7 @@ export const Summary: FC<Props> = ({}) => {
     <Section>
       <H2>summaryTitle</H2>
 
-      <Text>summaryText</Text>
+      <SummaryText>summaryText</SummaryText>
     </Section>
   );
 };

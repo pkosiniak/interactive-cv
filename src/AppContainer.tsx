@@ -1,16 +1,16 @@
-import { FC, useLayoutEffect } from 'react';
-import { useRecoilValue } from 'recoil';
+import { FC, useLayoutEffect, useMemo } from 'react';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 
 import { MainArticle } from './modules/Article';
 import { ControlPanel } from './modules/ControlPanel';
 import { SidePanel } from './modules/SidePanel';
-import { fontSizeAtom, sidePanelAtom, themeAtom } from './store';
-import { GlobalStyles, Theme } from './styles';
+import { darkModeAtom, fontSizeAtom, isThemePersisted, sidePanelAtom } from './store';
+import { GlobalStyles, Theme, themeDark, themeLight } from './styles';
 
 export const Container = styled.div`
-  background-color: ${({ theme }) => (theme as Theme).colors.mediumLight};
+  background-color: ${({ theme }) => (theme as Theme).colors.body};
   display: flex;
   justify-content: center;
 `;
@@ -22,16 +22,23 @@ export const Main = styled.main`
 `;
 
 export const AppContainer: FC = () => {
-  const currentTheme = useRecoilValue(themeAtom);
+  const [isDarkMode, setIsDarkMode] = useRecoilState(darkModeAtom);
   const fontSize = useRecoilValue(fontSizeAtom);
   const showSidePanel = useRecoilValue(sidePanelAtom);
+
+  const theme = useMemo(() => (isDarkMode ? themeDark : themeLight), [isDarkMode]);
 
   useLayoutEffect(() => {
     document.querySelector('html')?.setAttribute('style', `font-size: ${fontSize}px`);
   }, [fontSize]);
 
+  useLayoutEffect(() => {
+    if (!isThemePersisted())
+      setIsDarkMode(!!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches));
+  }, []);
+
   return (
-    <ThemeProvider theme={currentTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Container>
         <Main>

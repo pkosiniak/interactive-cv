@@ -7,6 +7,7 @@ import { color } from '@/styles/theme';
 type Props = {
   text?: string;
   color?: string;
+  className?: string
 };
 
 const Div = styled.div`
@@ -19,11 +20,11 @@ const Span = styled.span`
   ${color}
 `;
 
-export const Text: FCC<Props> = ({ text = '', children, color }) => {
+export const Text: FCC<Props> = ({ text = '', className, children, color }) => {
   const { t } = useTranslation();
 
   return (
-    <Div color={color}>
+    <Div className={className} color={color}>
       {text ? t(text) : ''}
       {isString(children) ? t(children as string) : children}
     </Div>

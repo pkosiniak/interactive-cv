@@ -77,6 +77,8 @@ const recourses = {
   languages: 'Languages',
   english: 'english',
   fullProfessional: '(Full Professional)',
+  createdBy: 'Created by',
+  redBabel: 'Red Babel',
   copied: 'Copied'
 };
 

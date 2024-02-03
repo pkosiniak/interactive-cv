@@ -1,25 +1,12 @@
-import { themeLight } from '@/styles';
-import { atom, selector } from 'recoil';
+import { atom } from 'recoil';
+import { persistEffect } from './effects';
+
+const DARK_MODE = 'DARK_MODE';
 
 export const darkModeAtom = atom({
-  key: 'DARK_MODE',
+  key: DARK_MODE,
   default: false,
+  effects: [persistEffect(DARK_MODE)],
 });
 
-export const themeAtom = atom({
-  key: 'CURRENT_THEME',
-  default: themeLight,
-});
-
-export const themeSelector = selector({
-  key: 'GET_THEME_STATE',
-  get: ({ get }) => {
-    const isDarkMode = get(darkModeAtom);
-    const currentTheme = get(themeAtom);
-
-    return {
-      currentTheme,
-      isDarkMode,
-    };
-  },
-});
+export const isThemePersisted = () => !!localStorage.getItem(DARK_MODE)

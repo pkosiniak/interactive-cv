@@ -1,8 +1,10 @@
 import { Button } from '@/components';
 import { GBIcon, PLIcon } from '@/components/Icons';
+import { LANGUAGE, languageAtom } from '@/store';
 import styled from '@emotion/styled';
-import { FC, useCallback, useState } from 'react';
+import { FC, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useRecoilState } from 'recoil';
 
 const Wrapper = styled.div`
   width: 60px;
@@ -23,13 +25,8 @@ const StyledPLIcon = styled(PLIcon)``;
 
 type Props = {};
 
-enum LANGUAGE {
-  EN = 'en',
-  PL = 'pl',
-}
-
 export const LanguageSwitch: FC<Props> = ({}) => {
-  const [language, setLanguage] = useState(LANGUAGE.PL);
+  const [language, setLanguage] = useRecoilState(languageAtom);
 
   const { i18n } = useTranslation();
 

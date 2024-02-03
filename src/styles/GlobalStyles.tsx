@@ -1,7 +1,5 @@
 import { FC } from 'react';
-import { useRecoilValue } from 'recoil';
 import { Global, css, useTheme } from '@emotion/react';
-import { fontSizeAtom } from '@/store';
 import { Theme } from './theme';
 
 const globalCss = (theme: Theme) => css`

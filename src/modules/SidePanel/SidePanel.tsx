@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Contact } from '../Contact';
 import { Languages } from '../Languages';
 import { useRecoilValue } from 'recoil';
-import { responsiveViewAtom } from '@/store';
+import { viewAtom } from '@/store';
 import { css } from '@emotion/react';
 import { MainSkills } from '../Skills/MainSkills';
 
@@ -26,7 +26,8 @@ const Aside = styled.aside<{ isRegular: boolean }>`
   flex-direction: column;
   ${({ isRegular }) => (isRegular ? regularView : printView)}
 
-  background-color: ${({ theme }) => theme.colors.main};
+  background-color: ${({ theme }) => theme.colors.sidePanel};
+
   &,
   div,
   h4 {
@@ -38,7 +39,7 @@ const Aside = styled.aside<{ isRegular: boolean }>`
 type Props = {};
 
 export const SidePanel: FC<Props> = ({}) => {
-  const isRegular = useRecoilValue(responsiveViewAtom);
+  const isRegular = useRecoilValue(viewAtom);
 
   return (
     <Aside isRegular={isRegular}>

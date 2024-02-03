@@ -1,16 +1,15 @@
 import { atom } from 'recoil';
+import { persistEffect } from './effects';
 
 export enum VIEW {
   PRINT = 'PRINT',
   RESPONSIVE = 'RESPONSIVE',
 }
 
-export const responsiveViewAtom = atom({
-  key: 'RESPONSIVE_VIEW',
-  default: true,
-});
+const RESPONSIVE_VIEW = 'RESPONSIVE_VIEW';
 
 export const viewAtom = atom({
-  key: 'VIEW',
-  default: VIEW.RESPONSIVE,
+  key: 'RESPONSIVE_VIEW',
+  default: true,
+  effects: [persistEffect(RESPONSIVE_VIEW)],
 });

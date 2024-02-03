@@ -16,14 +16,14 @@ const sizeStyle = ({ size }: SizeProps) => css`
     : ''}
 `;
 
-const Span = styled.span`
+const StyledIcon = styled.i`
   display: flex;
   width: 24px;
   height: 24px;
   ${sizeStyle}
   ${color}
   & * {
-    fill: ${({ theme }) => theme.colors.text};
+    /* fill: ${({ theme }) => theme.colors.text}; */
     ${fill}
   }
 `;
@@ -31,5 +31,5 @@ const Span = styled.span`
 export type IconProps = SizeProps & ColorProps;
 
 export const Icon: FCC<IconProps> = ({ children, ...props }) => {
-  return <Span {...props}>{children}</Span>;
+  return <StyledIcon {...props}>{children}</StyledIcon>;
 };

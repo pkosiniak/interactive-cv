@@ -14,6 +14,7 @@ type Props = {
   duration: string;
   location?: string;
   imgSrc?: string;
+  className?: string;
 };
 
 export const Job: FCC<Props> = ({
@@ -22,6 +23,7 @@ export const Job: FCC<Props> = ({
   company,
   duration,
   location,
+  className,
   children,
 }) => {
   const theme = useTheme();
@@ -29,7 +31,7 @@ export const Job: FCC<Props> = ({
   const { isLargeFontSize } = useRecoilValue(flagsSelector);
 
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <Container>
         <Logo src={imgSrc} size={isLargeFontSize ? undefined : SMALL_LOGO_SIZE} />
 

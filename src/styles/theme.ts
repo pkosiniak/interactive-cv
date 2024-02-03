@@ -9,9 +9,12 @@ const lightColors = {
   light: '#bbb',
   veryLight: '#f1f9f1',
   background: '#fff',
+  body: '#ccc',
   main: '#35472f',
+  sidePanel: '#35472f',
   contrast: '#fff',
   transparent: '#0000',
+  red: '#c00',
 };
 
 export const themeLight = {
@@ -26,9 +29,12 @@ const darkColors: Colors = {
   light: '#bbb',
   veryLight: '#2c2f2c',
   background: '#333',
-  main: '#35472f',
+  body: '#222',
+  main: '#3f6133',
+  sidePanel: '#1d291a',
   contrast: '#fff',
   transparent: '#0000',
+  red: '#f00',
 };
 
 export const themeDark = {
@@ -58,3 +64,5 @@ export enum FONT_SIZE {
   SMALL = 11,
   LARGE = 16,
 }
+
+export const PRINT_BREAK = 'print-break';
