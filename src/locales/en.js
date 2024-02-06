@@ -5,6 +5,8 @@ const recourses = {
   email: 'pawelkosiniak@gmail.com',
   phone: '+48531487666',
   linkedIn: 'linkedin.com/in/pawel-kosiniak',
+  onlineCV: 'ujeb.link/pawel-kosiniak-cv', 
+  onlineCVPrint: 'tinyurl.com/pawel-kosiniak-cv',
   cracowLocation: 'Cracow, Lesser Poland, Poland',
   summaryTitle: 'Summary',
   summaryText:
@@ -32,6 +34,7 @@ const recourses = {
   freelancing: 'Freelancing',
   softwareEngineer: 'Software Engineer',
   freelancingDuration: '2020 - Apr 2021 (1 year)',
+  // freelancingDescription:'Several projects including React, ReactNative, ',
   xkom: 'x-kom',
   frontend: 'Frontend Developer',
   frontendInternship: 'Frontend Developer - Internship',

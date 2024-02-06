@@ -6,7 +6,7 @@ import { Mail24Regular, Phone24Regular, Globe24Regular } from '@fluentui/react-i
 import { LinkedInIcon } from '@/components/Icons';
 import { CopyButton, H4, Link } from '@/components';
 import { flagsSelector } from '@/store/flagsSelector';
-import { Container, LinkWrapper, Wrapper } from './parts';
+import { Container, LinkWrapper, PrintLink, ScreenLint, Wrapper } from './parts';
 
 type Props = {
   isOnSide?: boolean;
@@ -20,6 +20,7 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
   const mailHref = useMemo(() => `mailto:${t('email')}`, [t]);
   const phoneHref = useMemo(() => `tel:${t('phone')}`, [t]);
   const likedInHref = useMemo(() => `https://www.${t('linkedIn')}`, [t]);
+  const cvHref = useMemo(() => `https://www.${t('onlineCV')}`, [t]);
 
   const sideColor = useMemo(() => (isOnSide ? theme.colors.contrast : undefined), [isOnSide]);
   const shouldSplit = useMemo(() => isOnSide, [isOnSide]);
@@ -70,15 +71,25 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
         <LinkWrapper isOnSide={isOnSide}>
           <Globe24Regular color={sideColor} />
 
-          <Link
-            href={'about:blank'}
+          <ScreenLint
+            href={cvHref}
             target='_blank'
             rel='noopener noreferrer'
             color={sideColor}
-            // breakAt={shouldSplit ? '' : ''}
+            breakAt={shouldSplit ? 'pawel' : ''}
           >
-            placeholder
-          </Link>
+            onlineCV
+          </ScreenLint>
+
+          <PrintLink
+            href={cvHref}
+            target='_blank'
+            rel='noopener noreferrer'
+            color={sideColor}
+            breakAt={shouldSplit ? 'pawel' : ''}
+          >
+            onlineCVPrint
+          </PrintLink>
 
           <CopyButton textToCopy={t('placeholder')} hidden={!isResponsiveView} />
         </LinkWrapper>

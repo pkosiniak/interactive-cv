@@ -5,6 +5,8 @@ const recourses = {
   email: 'pawelkosiniak@gmail.com',
   phone: '+48531487666',
   linkedIn: 'linkedin.com/in/pawel-kosiniak',
+  onlineCV: 'ujeb.link/pawel-kosiniak-cv', 
+  onlineCVPrint: 'tinyurl.com/pawel-kosiniak-cv',
   cracowLocation: 'Kraków, Małopolska, Polska',
   summaryTitle: 'Podsumowanie',
   summaryText:

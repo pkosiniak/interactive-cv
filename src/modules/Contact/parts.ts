@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { FlexBox } from '@/components';
+import { FlexBox, Link } from '@/components';
 import { color } from '@/styles/theme';
 
 export const Wrapper = styled(FlexBox)`
@@ -35,5 +35,23 @@ export const LinkWrapper = styled(FlexBox)<WrapperProps>`
       color: ${isOnSide ? colors.light : colors.medium};
       fill: ${isOnSide ? colors.light : colors.medium};
     `}
+  }
+`;
+
+export const PrintLink = styled(Link)`
+   @media screen {
+    display: none;
+  }
+  @media print {
+    display: block;
+  }
+`;
+
+export const ScreenLint = styled(Link)`
+  @media screen {
+    display: block;
+  }
+  @media print {
+    display: none;
   }
 `;
