@@ -2,7 +2,7 @@ import { FC, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
 import { useTheme } from '@emotion/react';
-import { Mail24Regular, Phone24Regular, Globe20Regular } from '@fluentui/react-icons';
+import { Mail24Regular, Phone24Regular, Globe24Regular } from '@fluentui/react-icons';
 import { LinkedInIcon } from '@/components/Icons';
 import { CopyButton, H4, Link } from '@/components';
 import { flagsSelector } from '@/store/flagsSelector';
@@ -68,7 +68,7 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
         </LinkWrapper>
 
         <LinkWrapper isOnSide={isOnSide}>
-          <Globe20Regular color={sideColor} />
+          <Globe24Regular color={sideColor} />
 
           <Link
             href={'about:blank'}

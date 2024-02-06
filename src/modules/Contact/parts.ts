@@ -20,6 +20,7 @@ type WrapperProps = {
 
 export const LinkWrapper = styled(FlexBox)<WrapperProps>`
   flex-grow: 1;
+  flex-basis: calc(50% - 5px);
   align-items: center;
   gap: 5px;
 

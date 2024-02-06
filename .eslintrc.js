@@ -22,7 +22,6 @@ module.exports = {
     '@typescript-eslint/no-this-alias': 'error',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
     '@typescript-eslint/no-unused-vars': [
-      // TODO: change to error
       'error',
       {
         vars: 'local',
