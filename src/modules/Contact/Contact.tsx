@@ -65,7 +65,7 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
             linkedIn
           </Link>
 
-          <CopyButton textToCopy={t('linkedIn')} hidden={!isResponsiveView} />
+          <CopyButton textToCopy={likedInHref} hidden={!isResponsiveView} />
         </LinkWrapper>
 
         <LinkWrapper isOnSide={isOnSide}>
@@ -91,7 +91,7 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
             onlineCVPrint
           </PrintLink>
 
-          <CopyButton textToCopy={t('placeholder')} hidden={!isResponsiveView} />
+          <CopyButton textToCopy={cvHref} hidden={!isResponsiveView} />
         </LinkWrapper>
       </Container>
     </Wrapper>
