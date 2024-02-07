@@ -34,7 +34,7 @@ const recourses = {
   freelancing: 'Freelancing',
   softwareEngineer: 'Software Engineer',
   freelancingDuration: '2020 - Apr 2021 (1 year)',
-  // freelancingDescription:'Several projects including React, ReactNative, ',
+  freelancingDescription:'Several projects including an application to carry out exams for Ignatianum University In Cracow; Chrome browser extension.',
   xkom: 'x-kom',
   frontend: 'Frontend Developer',
   frontendInternship: 'Frontend Developer - Internship',

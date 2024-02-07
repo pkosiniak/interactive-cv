@@ -8,7 +8,7 @@ export const persistEffect =
 
     if (!isNullable(saved)) setSelf(JSON.parse(saved));
 
-    onSet((next, _, isReset) => {
-      isReset ? localStorage.removeItem(key) : localStorage.setItem(key, JSON.stringify(next));
-    });
+    onSet((next, _, isReset) =>
+      isReset ? localStorage.removeItem(key) : localStorage.setItem(key, JSON.stringify(next))
+    );
   };

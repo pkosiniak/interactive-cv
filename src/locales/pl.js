@@ -5,7 +5,7 @@ const recourses = {
   email: 'pawelkosiniak@gmail.com',
   phone: '+48531487666',
   linkedIn: 'linkedin.com/in/pawel-kosiniak',
-  onlineCV: 'ujeb.link/pawel-kosiniak-cv', 
+  onlineCV: 'ujeb.link/pawel-kosiniak-cv',
   onlineCVPrint: 'tinyurl.com/pawel-kosiniak-cv',
   cracowLocation: 'Kraków, Małopolska, Polska',
   summaryTitle: 'Podsumowanie',
@@ -32,6 +32,8 @@ const recourses = {
     'technologie: react, typescript, next, emotion, ajv, express, passport, tsoa, typeorm, nodemailer, swagger-ui-express',
   zdolniakiTests: 'testy: jest, supertest',
   freelancing: 'Freelancing',
+  freelancingDescription:
+    'Kilka projektów w tym aplikacja do przeprowadzania egzaminów dla Uniwersytetu Ignatianum w Krakowie; rozszerzenie do przeglądarki Chrome.',
   softwareEngineer: 'Inżynier Oprogramowania',
   freelancingDuration: '2020 - Kwiecień 2021 (1 rok)',
   xkom: 'x-kom',

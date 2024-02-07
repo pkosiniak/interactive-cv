@@ -1,12 +1,21 @@
 import { FC, useCallback, useEffect, useLayoutEffect, useMemo } from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 
 import { MainArticle } from './modules/Article';
 import { ControlPanel } from './modules/ControlPanel';
 import { SidePanel } from './modules/SidePanel';
-import { darkModeAtom, fontSizeAtom, isThemePersisted, mobileAtom, sidePanelAtom } from './store';
+import {
+  Languages,
+  darkModeAtom,
+  fontSizeAtom,
+  isLanguagePersisted,
+  isThemePersisted,
+  languageAtom,
+  mobileAtom,
+  sidePanelAtom,
+} from './store';
 import { GlobalStyles, Theme, themeDark, themeLight } from './styles';
 import { getWindowWidth } from './utils/functions';
 
@@ -27,8 +36,18 @@ export const AppContainer: FC = () => {
   const [isMobile, setIsMobile] = useRecoilState(mobileAtom);
   const fontSize = useRecoilValue(fontSizeAtom);
   const showSidePanel = useRecoilValue(sidePanelAtom);
+  const setLanguage = useSetRecoilState(languageAtom);
 
   const theme = useMemo(() => (isDarkMode ? themeDark : themeLight), [isDarkMode]);
+
+  useEffect(() => {
+    if (isLanguagePersisted()) return;
+
+    const preferred = (navigator.languages ? navigator.languages[0] : navigator.language)?.split('-')[0];
+    const language = Languages.find(value => value === preferred);
+
+    if (language) setLanguage(language);
+  }, []);
 
   useLayoutEffect(() => {
     document.querySelector('html')?.setAttribute('style', `font-size: ${fontSize}px`);
