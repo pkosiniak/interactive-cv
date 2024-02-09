@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import styled from '@emotion/styled';
-import { ChevronLeft24Filled } from '@fluentui/react-icons';
+import { Navigation24Regular,  } from '@fluentui/react-icons';
 import { css } from '@emotion/react';
 import { ToggleButton } from '@/components';
 import { flagsSelector } from '@/store';
@@ -59,7 +59,7 @@ export const ControlPanel: FC<Props> = ({}) => {
   return (
     <Wrapper>
       <MenuWrapper toLeft={showControlPanel} id={CONTROL_PANEL}>
-        <ToggleButton openIcon={<ChevronLeft24Filled />} onChange={setShowControlPanel} />
+        <ToggleButton openIcon={<Navigation24Regular />} onChange={setShowControlPanel} />
 
         <ControlsWrapper>
           {!isMobile && <ViewToggle />}
