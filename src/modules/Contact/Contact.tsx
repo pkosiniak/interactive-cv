@@ -12,6 +12,16 @@ type Props = {
   isOnSide?: boolean;
 };
 
+const phoneMask = (value: string) => {
+  const parts: string[] = [];
+
+  for (let i = 0; i < value.length; i += 3) {
+    parts.push(value.substring(i, i + 3));
+  }
+
+  return parts.join(' ');
+};
+
 export const Contact: FC<Props> = ({ isOnSide = false }) => {
   const { t } = useTranslation();
   const theme = useTheme();
@@ -44,7 +54,7 @@ export const Contact: FC<Props> = ({ isOnSide = false }) => {
           <Phone24Regular />
 
           <Link href={phoneHref} color={sideColor}>
-            phone
+            {phoneMask(t('phone'))}
           </Link>
 
           <CopyButton textToCopy={t('phone')} hidden={!isResponsiveView} />

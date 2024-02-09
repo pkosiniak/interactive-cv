@@ -7,7 +7,7 @@ const recourses = {
   linkedIn: 'linkedin.com/in/pawel-kosiniak',
   onlineCV: 'ujeb.link/pawel-kosiniak-cv',
   onlineCVPrint: 'tinyurl.com/pawel-kosiniak-cv',
-  cracowLocation: 'Kraków, Małopolska, Polska',
+  cracowLocation: 'Kraków, Polska',
   summaryTitle: 'Podsumowanie',
   summaryText:
     "Jestem młodym i kreatywnym programistą, chętnie podejmującym wyzwania, szybko uczącym się nowych technologii, który lubi stosować nieszablonowe podejścia i znajdować nowe, lub nieoczywiste rozwiązania. Pierwotnie chciałem zostać akustykiem, jednak szybko zrozumiałem, że jako informatyk programista, mogę osiągnąć o wiele więcej, tworzyć coś bardziej „namacalnego”. W 2019 zainteresowałem się React'em i zacząłem pisać pierwsze projekty w tej technologii, a zaraz potem wziąłem udział w stażu organizowanym przez x-kom, gdzie pracowałem nad częścią strony sklepu internetowego. Swoją pracę inżynierską bazującą na React Native i systemach wbudowanych obroniłem w 2020 roku. Od tego czasu pracowałem nad kilkoma różnymi projektami głównie w React, ale też Express, React-Native. Obecnie, poza kontynuacją pracy we front-endzie, jestem zainteresowany rozwijaniem swojej wiedzy i umiejętności w technologiach back-endowych.",
