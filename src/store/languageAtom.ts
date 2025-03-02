@@ -1,5 +1,7 @@
 import { AtomEffect, atom } from 'recoil';
 import i18next from 'i18next';
+import { string } from '@recoiljs/refine';
+import { syncEffect } from 'recoil-sync';
 import { persistEffect } from './effects';
 
 const LANGUAGE_SATE = 'LANGUAGE_SATE';
@@ -16,7 +18,11 @@ export const switchLanguageEffect: AtomEffect<LANGUAGE> = ({ onSet }) => onSet(n
 export const languageAtom = atom({
   key: LANGUAGE_SATE,
   default: LANGUAGE.EN,
-  effects: [persistEffect(LANGUAGE_SATE), switchLanguageEffect],
+  effects: [
+    syncEffect({ refine: string() }) as AtomEffect<LANGUAGE>,
+    persistEffect(LANGUAGE_SATE),
+    switchLanguageEffect,
+  ],
 });
 
 export const isLanguagePersisted = () => !!localStorage.getItem(LANGUAGE_SATE);

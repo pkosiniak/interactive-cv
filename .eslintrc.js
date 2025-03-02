@@ -13,6 +13,7 @@ module.exports = {
   parserOptions: {
     project: 'tsconfig.json',
     sourceType: 'module',
+    tsconfigRootDir: __dirname,
   },
   plugins: ['eslint-plugin-import', 'eslint-plugin-react', '@typescript-eslint'],
   ignorePatterns: ['.eslintrc.js', 'craco.config.js'],
@@ -68,18 +69,18 @@ module.exports = {
     // "import/prefer-default-export": "off",   /* TBD */
     /* TBD */
     'import/order': [
-        'error',
-        {
-          groups: ['builtin', 'external', 'internal', ['index', 'sibling', 'parent']],
-          pathGroupsExcludedImportTypes: ['builtin'],
-          pathGroups: [
-            {
-              pattern: '@/**',
-              group: 'internal',
-              position: 'after',
-            },
-          ],
-        },
-      ],
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', ['index', 'sibling', 'parent']],
+        pathGroupsExcludedImportTypes: ['builtin'],
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'internal',
+            position: 'after',
+          },
+        ],
+      },
+    ],
   },
 };
