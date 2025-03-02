@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { useRecoilValue } from 'recoil';
 import { flagsSelector } from '@/store';
+import { PRINT_BREAK } from '@/styles';
 import { Summary } from '../Summary';
 import { Experience } from '../Experience';
 import { Education } from '../Education/Education';
@@ -27,6 +28,8 @@ export const MainArticle: FC<Props> = ({}) => {
       <Skills />
 
       <Footer />
+
+      <div className={PRINT_BREAK} />
     </StyledArticle>
   );
 };

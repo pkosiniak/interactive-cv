@@ -7,11 +7,11 @@ export const SoundEditor: FC<Props> = ({}) => {
   return (
     <Description>
       <List>
-        <ListItem>acousticianBullet</ListItem>
+        <ListItem>soundEditorBullet</ListItem>
       </List>
 
       <Text>cooperation</Text>
-      <Text>acousticianCooperation</Text>
+      <Text>soundEditorCooperation</Text>
     </Description>
   );
 };

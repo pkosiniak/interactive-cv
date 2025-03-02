@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styled from '@emotion/styled';
-import { Description, H5, Paragraph, List, Text, Box, ListItem } from '@/components';
+import { Description, H5, Paragraph, List, Text, Box, ListItem, PrintBreak } from '@/components';
 
 type Props = {};
 
@@ -25,6 +25,8 @@ export const CoderyLabs: FC<Props> = ({}) => {
           </List>
         </P>
 
+        <PrintBreak />
+        
         <P>
           <Text>customMade</Text>
           <List>

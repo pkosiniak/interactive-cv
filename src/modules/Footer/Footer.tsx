@@ -48,7 +48,7 @@ export const Footer: FC<Props> = ({}) => {
   const theme = useTheme();
 
   return (
-    <StyledFooter className={PRINT_BREAK}>
+    <StyledFooter>
       <i>{t('createdBy')}</i>
 
       <Link href='https://github.com/pkosiniak' target='_blank'>

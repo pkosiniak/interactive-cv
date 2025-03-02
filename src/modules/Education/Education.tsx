@@ -7,7 +7,7 @@ type Props = {};
 
 export const Education: FC<Props> = ({}) => {
   return (
-    <Section>
+    <Section className={PRINT_BREAK}>
       <H2>education</H2>
 
       <Job
@@ -26,7 +26,7 @@ export const Education: FC<Props> = ({}) => {
             <ListItem>thesisBullet2</ListItem>
             <ListItem>thesisBullet3</ListItem>
             <ListItem>thesisBullet4</ListItem>
-            <ListItem className={PRINT_BREAK}>thesisBullet5</ListItem>
+            <ListItem>thesisBullet5</ListItem>
           </List>
 
           <Text>usedTechnologies</Text>

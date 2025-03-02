@@ -1,10 +1,9 @@
 import { FC } from 'react';
 import { Section } from '@/components/Section';
 import { H2 } from '@/components';
-import { PRINT_BREAK } from '@/styles';
-import { CoderyLabs, Xkom, Acoustician, SoundEditor } from './components';
+import { CoderyLabs, Xkom, Acoustician, SoundEditor, Freelancing, Freelancing2, Ibm } from './components';
 import { Job } from '../Job/Job';
-import { Freelancing } from './components/Freelancing';
+import {} from './components/Freelancing';
 
 type Props = {};
 
@@ -12,6 +11,20 @@ export const Experience: FC<Props> = ({}) => {
   return (
     <Section>
       <H2>experience</H2>
+
+      <Job
+        company='ibm'
+        position='seniorEngineer'
+        duration='ibmDuration'
+        location='cracowLocation'
+        imgSrc='./assets/ibmLogo.png'
+      >
+        <Ibm />
+      </Job>
+
+      <Job company='freelancing' position='softwareEngineer' duration='freelancingDuration2'>
+        <Freelancing2 />
+      </Job>
 
       <Job
         company='coderyLabs'
@@ -33,7 +46,6 @@ export const Experience: FC<Props> = ({}) => {
         duration='xkomDuration'
         location='cracowLocation'
         imgSrc='./assets/x_kom_pl_logo.jfif'
-        className={PRINT_BREAK}
       >
         <Xkom />
       </Job>

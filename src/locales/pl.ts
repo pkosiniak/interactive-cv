@@ -1,4 +1,6 @@
-const recourses = {
+import { LOCALES } from './en';
+
+const recourses: LOCALES = {
   name: 'Paweł Kosiniak',
   title: 'Inżynier Oprogramowania',
   contact: 'Kontakt',
@@ -12,6 +14,17 @@ const recourses = {
   summaryText:
     "Jestem młodym i kreatywnym programistą, chętnie podejmującym wyzwania, szybko uczącym się nowych technologii, który lubi stosować nieszablonowe podejścia i znajdować nowe, lub nieoczywiste rozwiązania. Pierwotnie chciałem zostać akustykiem, jednak szybko zrozumiałem, że jako informatyk programista, mogę osiągnąć o wiele więcej, tworzyć coś bardziej „namacalnego”. W 2019 zainteresowałem się React'em i zacząłem pisać pierwsze projekty w tej technologii, a zaraz potem wziąłem udział w stażu organizowanym przez x-kom, gdzie pracowałem nad częścią strony sklepu internetowego. Swoją pracę inżynierską bazującą na React Native i systemach wbudowanych obroniłem w 2020 roku. Od tego czasu pracowałem nad kilkoma różnymi projektami głównie w React, ale też Express, React-Native. Obecnie, poza kontynuacją pracy we front-endzie, jestem zainteresowany rozwijaniem swojej wiedzy i umiejętności w technologiach back-endowych.",
   experience: 'Doświadczenie',
+  ibm: 'IBM',
+  seniorEngineer: 'Senior Software Engineer',
+  ibmDuration: 'Październik 2024 - Luty 2025 (5 mies.)',
+  apptioBi: 'ApptioBI',
+  abiDescription:
+    "Rozwój, utrzymanie oraz testowanie złożonej aplikacji frontendowej dostarczającej obszerny system raportowy, oraz wykonywanie zadań DevOps'owych",
+  abiTech:
+    'technologie: react, react-redux, typescript, javascript, piral, material-ui, ag-grid, highcharts, storybook, styled-components, github',
+  abiTests: 'jest, cypress, storybook',
+  freelancingDuration2: 'Listopad 2023 - Wrzesień 2024 (11 months)',
+  freelancingDescription2: 'Kilka projektów frontendowych i backendowych w React and NodeJs',
   coderyLabs: 'CoderyLabs',
   fullStack: 'Fullstack Developer',
   coderyDuration: 'Kwiecień 2021 - Październik 2023 (2 lata 7 mies.)',
@@ -56,8 +69,8 @@ const recourses = {
   acousticianCooperation: 'Forum MotoSolutions, Mercedes-Benz Sobiesław Zasada Automotive, Klub Studencki Żaczek',
   soundEditor: 'Montażysta dźwięku',
   soundEditorDuration: 'Styczeń 2015 - Listopad 2017 (2 lata 11 miesięcy)',
-  acousticianBullet: 'Audiobooki, audioprzewodniki, audiodeskrypcje, podkłady muzyczne',
-  acousticianCooperation:
+  soundEditorBullet: 'Audiobooki, audioprzewodniki, audiodeskrypcje, podkłady muzyczne',
+  soundEditorCooperation:
     'Dział Osób Niepełnosprawnych Uniwersytetu Jagiellońskiego, Muzeum Inżynierii Miejskiej w Krakowie, Audiotour',
   education: 'Wykształcenie',
   agh: 'Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie',
@@ -81,6 +94,8 @@ const recourses = {
   languages: 'Języki',
   english: 'angielski',
   fullProfessional: '(Pełna biegłość zawodowa)',
+  redBabel: 'Red Babel',
+  createdBy: 'Created by',
   copied: 'Skopiowano',
 };
 
