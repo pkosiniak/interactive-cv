@@ -1,18 +1,19 @@
 import { FC } from 'react';
 import { Description, List, ListItem, Text } from '@/components';
+import { usePrefix } from '@/utils/functions';
 
-type Props = {};
+export const Acoustician: FC = () => {
+  const s = usePrefix('acoustician.description');
 
-export const Acoustician: FC<Props> = ({}) => {
   return (
     <Description>
       <List>
-        <ListItem>acousticianBullet1</ListItem>
-        <ListItem>acousticianBullet2</ListItem>
+        <ListItem>{s('1')}</ListItem>
+        <ListItem>{s('2')}</ListItem>
       </List>
 
       <Text>cooperation</Text>
-      <Text>acousticianCooperation</Text>
+      <Text>{s('companies')}</Text>
     </Description>
   );
 };

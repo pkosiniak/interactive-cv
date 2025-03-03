@@ -1,21 +1,25 @@
 import { FC } from 'react';
 import { Description, List, ListItem, Text } from '@/components';
+import { usePrefix } from '@/utils/functions';
 
-type Props = {};
+const PREFIX = 'xkom.projects.xkom';
 
-export const Xkom: FC<Props> = ({}) => {
+export const Xkom: FC = () => {
+  const s = usePrefix(PREFIX);
+  const description = usePrefix(PREFIX + '.description');
+
   return (
     <Description>
       <List>
-        <ListItem>xkomBullet1</ListItem>
-        <ListItem>xkomBullet2</ListItem>
-        <ListItem>xkomBullet3</ListItem>
-        <ListItem>xkomBullet4</ListItem>
-        <ListItem>xkomBullet5</ListItem>
+        <ListItem>{description('1')}</ListItem>
+        <ListItem>{description('2')}</ListItem>
+        <ListItem>{description('3')}</ListItem>
+        <ListItem>{description('4')}</ListItem>
+        <ListItem>{description('5')}</ListItem>
       </List>
 
-      <Text>usedTechnologies</Text>
-      <Text>xkomUsedTechnologies</Text>
+      <Text>{'usedTechnologies'}</Text>
+      <Text>{s('tech')}</Text>
     </Description>
   );
 };

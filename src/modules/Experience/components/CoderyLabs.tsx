@@ -1,8 +1,7 @@
 import { FC } from 'react';
 import styled from '@emotion/styled';
 import { Description, H5, Paragraph, List, Text, Box, ListItem, PrintBreak } from '@/components';
-
-type Props = {};
+import { usePrefix } from '@/utils/functions';
 
 const P = styled(Paragraph)`
   display: flex;
@@ -10,45 +9,51 @@ const P = styled(Paragraph)`
   gap: 0.25rem;
 `;
 
-export const CoderyLabs: FC<Props> = ({}) => {
+const PREFIX = 'coderyLabs.projects.';
+
+export const CoderyLabs: FC = () => {
+  const adminPanel = usePrefix(PREFIX + 'adminPanel');
+  const customMade = usePrefix(PREFIX + 'customMade');
+  const vse = usePrefix(PREFIX + 'vse');
+  const zdolniaki = usePrefix(PREFIX + 'zdolniaki');
   return (
     <Description>
       <H5>projects</H5>
 
       <Box>
         <P>
-          <Text>adminPanel</Text>
+          <Text>{adminPanel()}</Text>
           <List>
-            <ListItem>adminPanelPosition</ListItem>
-            <ListItem>adminPanelTechs</ListItem>
-            <ListItem>adminPanelTests</ListItem>
+            <ListItem>{adminPanel('position')}</ListItem>
+            <ListItem>{adminPanel('tech')}</ListItem>
+            <ListItem>{adminPanel('tests')}</ListItem>
           </List>
         </P>
 
         <PrintBreak />
-        
+
         <P>
-          <Text>customMade</Text>
+          <Text>{customMade()}</Text>
           <List>
-            <ListItem>customMadePosition</ListItem>
-            <ListItem>customMadeTechs</ListItem>
+            <ListItem>{customMade('position')}</ListItem>
+            <ListItem>{customMade('tech')}</ListItem>
           </List>
         </P>
 
         <P>
-          <Text>vse</Text>
+          <Text>{vse()}</Text>
           <List>
-            <ListItem>vsePosition</ListItem>
-            <ListItem>vseTechs</ListItem>
+            <ListItem>{vse('position')}</ListItem>
+            <ListItem>{vse('tech')}</ListItem>
           </List>
         </P>
 
         <P>
-          <Text>zdolniaki</Text>
+          <Text>{zdolniaki()}</Text>
           <List>
-            <ListItem>zdolniakiPosition</ListItem>
-            <ListItem>zdolniakiTechs</ListItem>
-            <ListItem>zdolniakiTests</ListItem>
+            <ListItem>{zdolniaki('position')}</ListItem>
+            <ListItem>{zdolniaki('tech')}</ListItem>
+            <ListItem>{zdolniaki('tests')}</ListItem>
           </List>
         </P>
       </Box>

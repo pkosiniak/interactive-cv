@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import { Description, Text } from '@/components';
+import { usePrefix } from '@/utils/functions';
 
-type Props = {};
+export const Freelancing2: FC = () => {
+  const s = usePrefix('freelancing2');
 
-export const Freelancing2: FC<Props> = ({}) => {
   return (
     <Description>
-      <Text>freelancingDescription2</Text>
+      <Text>{s('description')}</Text>
     </Description>
   );
 };

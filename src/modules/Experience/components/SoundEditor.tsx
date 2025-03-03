@@ -1,17 +1,19 @@
 import { FC } from 'react';
 import { Description, List, ListItem, Text } from '@/components';
+import { usePrefix } from '@/utils/functions';
 
-type Props = {};
 
-export const SoundEditor: FC<Props> = ({}) => {
+export const SoundEditor: FC = () => {
+  const s = usePrefix('soundEditor.description');
+
   return (
     <Description>
       <List>
-        <ListItem>soundEditorBullet</ListItem>
+        <ListItem>{s('1')}</ListItem>
       </List>
 
       <Text>cooperation</Text>
-      <Text>soundEditorCooperation</Text>
+      <Text>{s('companies')}</Text>
     </Description>
   );
 };

@@ -1,36 +1,36 @@
 import { FC } from 'react';
 import { Section, H2, List, Text, Description, ListItem } from '@/components';
 import { PRINT_BREAK } from '@/styles';
+import { usePrefix } from '@/utils/functions';
 import { Job } from '../Job';
 
-type Props = {};
+const PREFIX = 'agh';
+const THESIS_PREFIX = 'projects.thesis';
 
-export const Education: FC<Props> = ({}) => {
+export const Education: FC = () => {
+  const s = usePrefix(PREFIX);
+  const thesis = usePrefix(PREFIX, THESIS_PREFIX);
+  const description = usePrefix(PREFIX, THESIS_PREFIX, 'description');
   return (
     <Section className={PRINT_BREAK}>
       <H2>education</H2>
 
-      <Job
-        company='agh'
-        position='engineer'
-        duration='aghDuration'
-        imgSrc='./assets/agh_university_of_science_and_technology_logo.jfif'
-      >
+      <Job company='agh' imgSrc='./assets/agh_university_of_science_and_technology_logo.jfif'>
         <Description>
-          <Text>thesisTopic</Text>
-          <Text>thesisTopicText</Text>
+          <Text>{s('description')}</Text>
+          <Text>{thesis('name')}</Text>
 
-          <Text>thesisRequirements</Text>
+          <Text>{description('requirements')}</Text>
           <List>
-            <ListItem>thesisBullet1</ListItem>
-            <ListItem>thesisBullet2</ListItem>
-            <ListItem>thesisBullet3</ListItem>
-            <ListItem>thesisBullet4</ListItem>
-            <ListItem>thesisBullet5</ListItem>
+            <ListItem>{description('1')}</ListItem>
+            <ListItem>{description('2')}</ListItem>
+            <ListItem>{description('3')}</ListItem>
+            <ListItem>{description('4')}</ListItem>
+            <ListItem>{description('5')}</ListItem>
           </List>
 
           <Text>usedTechnologies</Text>
-          <Text>thesisUsedTechnologies</Text>
+          <Text>{thesis('tech')}</Text>
         </Description>
       </Job>
     </Section>
