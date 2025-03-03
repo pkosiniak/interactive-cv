@@ -1,0 +1,23 @@
+name: Build Static App
+on:
+  push:
+    branches: [master]
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Build
+        run: |
+          echo "${{ github.ref }}"
+          npm install
+          npm run build
+      - name: Deploy
+        if: github.ref == 'refs/heads/master'
+        env:
+          deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          curl "$deploy_url"
+        
